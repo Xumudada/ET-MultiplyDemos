@@ -11,3 +11,16 @@ D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.AssemblyIn
 D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.csproj.CopyComplete
 D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Model.dll
 D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Model.pdb
+D:\ET-MultiplyDemos\Bin\libkcp.dylib
+D:\ET-MultiplyDemos\Bin\libkcp.so
+D:\ET-MultiplyDemos\Bin\kcp.dll
+D:\ET-MultiplyDemos\Bin\Model.deps.json
+D:\ET-MultiplyDemos\Bin\Model.dll
+D:\ET-MultiplyDemos\Bin\Model.pdb
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Server.Model.csprojAssemblyReference.cache
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Server.Model.csproj.CoreCompileInputs.cache
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Server.Model.AssemblyInfoInputs.cache
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Server.Model.AssemblyInfo.cs
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Server.Model.csproj.CopyComplete
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Model.dll
+D:\ET-MultiplyDemos\Server\Model\obj\Debug\Model.pdb

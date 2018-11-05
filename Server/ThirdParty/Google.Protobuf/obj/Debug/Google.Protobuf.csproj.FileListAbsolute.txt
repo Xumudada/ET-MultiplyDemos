@@ -8,3 +8,13 @@ D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\Google.Protobuf\obj\Debug\Go
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.csproj.CopyComplete
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.dll
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.pdb
+D:\ET-MultiplyDemos\Bin\Google.Protobuf.deps.json
+D:\ET-MultiplyDemos\Bin\Google.Protobuf.dll
+D:\ET-MultiplyDemos\Bin\Google.Protobuf.pdb
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.csprojAssemblyReference.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.csproj.CoreCompileInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.AssemblyInfoInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.AssemblyInfo.cs
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.csproj.CopyComplete
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.dll
+D:\ET-MultiplyDemos\Server\ThirdParty\Google.Protobuf\obj\Debug\Google.Protobuf.pdb

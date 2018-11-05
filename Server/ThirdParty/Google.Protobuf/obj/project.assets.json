@@ -1325,11 +1325,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+      "projectUniqueName": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
       "projectName": "Google.Protobuf",
-      "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+      "projectPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
       "packagesPath": "C:\\Users\\Sekia\\.nuget\\packages\\",
-      "outputPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\Google.Protobuf\\obj\\",
+      "outputPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\Google.Protobuf\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1348,8 +1348,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
-              "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
+            "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
+              "projectPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
             }
           }
         }

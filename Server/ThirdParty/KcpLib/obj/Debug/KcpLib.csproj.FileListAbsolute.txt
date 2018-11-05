@@ -9,3 +9,15 @@ D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.Asse
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.AssemblyInfo.cs
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.dll
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.pdb
+D:\ET-MultiplyDemos\Bin\libkcp.dylib
+D:\ET-MultiplyDemos\Bin\libkcp.so
+D:\ET-MultiplyDemos\Bin\kcp.dll
+D:\ET-MultiplyDemos\Bin\KcpLib.deps.json
+D:\ET-MultiplyDemos\Bin\KcpLib.dll
+D:\ET-MultiplyDemos\Bin\KcpLib.pdb
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.csprojAssemblyReference.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.csproj.CoreCompileInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.AssemblyInfoInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.AssemblyInfo.cs
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.dll
+D:\ET-MultiplyDemos\Server\ThirdParty\KcpLib\obj\Debug\KcpLib.pdb

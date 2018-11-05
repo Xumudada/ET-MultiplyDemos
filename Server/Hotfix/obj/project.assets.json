@@ -2490,11 +2490,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\Hotfix\\Server.Hotfix.csproj",
+      "projectUniqueName": "D:\\ET-MultiplyDemos\\Server\\Hotfix\\Server.Hotfix.csproj",
       "projectName": "Hotfix",
-      "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\Hotfix\\Server.Hotfix.csproj",
+      "projectPath": "D:\\ET-MultiplyDemos\\Server\\Hotfix\\Server.Hotfix.csproj",
       "packagesPath": "C:\\Users\\Sekia\\.nuget\\packages\\",
-      "outputPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\Hotfix\\obj\\",
+      "outputPath": "D:\\ET-MultiplyDemos\\Server\\Hotfix\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2513,8 +2513,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\BaiduNetdiskDownload\\ET-master\\Server\\Model\\Server.Model.csproj": {
-              "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\Model\\Server.Model.csproj"
+            "D:\\ET-MultiplyDemos\\Server\\Model\\Server.Model.csproj": {
+              "projectPath": "D:\\ET-MultiplyDemos\\Server\\Model\\Server.Model.csproj"
             }
           }
         }

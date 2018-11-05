@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj",
+      "projectUniqueName": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj",
       "projectName": "KcpLib",
-      "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj",
+      "projectPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj",
       "packagesPath": "C:\\Users\\Sekia\\.nuget\\packages\\",
-      "outputPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\KcpLib\\obj\\",
+      "outputPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\KcpLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

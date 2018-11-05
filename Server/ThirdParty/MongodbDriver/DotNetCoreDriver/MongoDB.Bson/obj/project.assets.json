@@ -824,11 +824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
+      "projectUniqueName": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
       "projectName": "MongoDB.Bson",
-      "projectPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
+      "projectPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
       "packagesPath": "C:\\Users\\Sekia\\.nuget\\packages\\",
-      "outputPath": "D:\\BaiduNetdiskDownload\\ET-master\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\obj\\",
+      "outputPath": "D:\\ET-MultiplyDemos\\Server\\ThirdParty\\MongodbDriver\\DotNetCoreDriver\\MongoDB.Bson\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

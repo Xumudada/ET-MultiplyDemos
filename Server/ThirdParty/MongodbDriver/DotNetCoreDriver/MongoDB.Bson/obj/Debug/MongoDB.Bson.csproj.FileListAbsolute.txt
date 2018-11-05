@@ -6,3 +6,12 @@ D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriv
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.AssemblyInfo.cs
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.dll
 D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.pdb
+D:\ET-MultiplyDemos\Bin\MongoDB.Bson.deps.json
+D:\ET-MultiplyDemos\Bin\MongoDB.Bson.dll
+D:\ET-MultiplyDemos\Bin\MongoDB.Bson.pdb
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.csprojAssemblyReference.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.csproj.CoreCompileInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.AssemblyInfoInputs.cache
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.AssemblyInfo.cs
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.dll
+D:\ET-MultiplyDemos\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Bson\obj\Debug\MongoDB.Bson.pdb
