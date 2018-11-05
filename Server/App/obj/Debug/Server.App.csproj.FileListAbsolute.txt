@@ -1,0 +1,17 @@
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.dylib
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.so
+D:\BaiduNetdiskDownload\ET-master\Bin\kcp.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\NLog.config
+D:\BaiduNetdiskDownload\ET-master\Bin\App.dll.config
+D:\BaiduNetdiskDownload\ET-master\Bin\App.deps.json
+D:\BaiduNetdiskDownload\ET-master\Bin\App.runtimeconfig.json
+D:\BaiduNetdiskDownload\ET-master\Bin\App.runtimeconfig.dev.json
+D:\BaiduNetdiskDownload\ET-master\Bin\App.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\App.pdb
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\Server.App.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\Server.App.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\Server.App.AssemblyInfoInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\Server.App.AssemblyInfo.cs
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\Server.App.csproj.CopyComplete
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\App.dll
+D:\BaiduNetdiskDownload\ET-master\Server\App\obj\Debug\App.pdb

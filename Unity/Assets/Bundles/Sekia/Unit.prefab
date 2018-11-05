@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1610378981859644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4373147931430276}
+  - component: {fileID: 114007285335791192}
+  m_Layer: 0
+  m_Name: Unit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4373147931430276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610378981859644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114007285335791192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610378981859644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d8cafd6a5a0447ab1db9a24cdcb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+  - key: 001_BingNv
+    gameObject: {fileID: 5748537760488782398, guid: b2a239b2261e7f349907dcf81e4fbd28,
+      type: 3}
+  - key: 002_JuMo
+    gameObject: {fileID: 9010841967309703136, guid: dfbb9eca4f53fdd4486e614068b27077,
+      type: 3}
+  - key: 003_QS
+    gameObject: {fileID: 6035833526034037590, guid: 85df48c8dc8da3a478f960e5483ed98b,
+      type: 3}
+  - key: 004_ShaWang
+    gameObject: {fileID: 4684658560373110615, guid: 6736bb488002b1c4aab25fa3cb81fac7,
+      type: 3}
+  - key: 005_XiaoXiao
+    gameObject: {fileID: 7944735245916806754, guid: 7ea4c76a5123f2f46a1353db26559f73,
+      type: 3}
+  - key: 006_KuLou
+    gameObject: {fileID: 6424282123276024540, guid: 2bae91c0302193042ac7d9aa1cbb58b7,
+      type: 3}
+  - key: 007_ShangJin
+    gameObject: {fileID: 7724451586032319202, guid: 21115d6d703bb1145b5502cfce00fa0f,
+      type: 3}
+  - key: 008_NvWang
+    gameObject: {fileID: 3392257908549175635, guid: 1f63a431cd0aa0d4899f384cd9c76fb7,
+      type: 3}
+  - key: 009_XiaoHei
+    gameObject: {fileID: 6001962451801098040, guid: f38728dbadbd37a4ca8345676a254662,
+      type: 3}
+  - key: 010_JiuXian
+    gameObject: {fileID: 8991710980491938581, guid: da6020d71ac7138459ca91a5446d8c0e,
+      type: 3}
+  - key: 011_JianSheng
+    gameObject: {fileID: 5970685715922230955, guid: 76b501bce86c471478553fa5420c7a35,
+      type: 3}
+  - key: 012_ShuiRen
+    gameObject: {fileID: 6899208527054637906, guid: d6af960c5a3852547ad9d4d4db06be2a,
+      type: 3}
+  - key: 013_DiFa
+    gameObject: {fileID: 1627093067116378946, guid: 9d497a9feced28f428a207eeb9cbaadf,
+      type: 3}
+  - key: 014_HuoNv
+    gameObject: {fileID: 4869503207644970603, guid: 9006f66f189dca14084f1dac2194a7a6,
+      type: 3}
+  - key: 015_ChenMo
+    gameObject: {fileID: 1917213141792238639, guid: c784ef9c3ba73bd4d852fd1b89bbc162,
+      type: 3}
+  - key: 016_XiaoLu
+    gameObject: {fileID: 4574859132053712817, guid: 8371b9711b71fcc4eb372cfee3d412d9,
+      type: 3}
+  - key: 017_ShenNiu
+    gameObject: {fileID: 3966768689964755871, guid: f9057d8baf5fd7d41a4a4ce5c5332d6a,
+      type: 3}
+  - key: 018_MeiDuSha
+    gameObject: {fileID: 7302529948499288641, guid: 07bf3fb87cea547418ada266dc8503be,
+      type: 3}
+  - key: 019_BaiHu
+    gameObject: {fileID: 7869238445348494499, guid: 7ac3244a49201424bb4a9fa1a9c401cb,
+      type: 3}
+  - key: 020_WuShi
+    gameObject: {fileID: 4325840854716898422, guid: b502a43da1573414ab7c905a1d68b2aa,
+      type: 3}
+  - key: 021_MoRi
+    gameObject: {fileID: 4016410946746040798, guid: 77f908f79ba1f5c4b84da622fc5db034,
+      type: 3}
+  - key: 022_HuanYing
+    gameObject: {fileID: 5901218277561944314, guid: f7994c46ca3e0b447927a745689b9f9a,
+      type: 3}
+  - key: 023_LuoSa
+    gameObject: {fileID: 5383733378992834844, guid: e1992e509d979cb4689567706b6c60cd,
+      type: 3}
+  - key: 100_Qiang
+    gameObject: {fileID: 1108089452324600, guid: 4a71de53c386a8a459ba3fa08bd62338,
+      type: 3}
+  - key: 101_ZhanShi1
+    gameObject: {fileID: 8943312761422768698, guid: e08ad7371ae6ccf438728b4c9e73d953,
+      type: 3}
+  - key: 101_ZhanShi2
+    gameObject: {fileID: 6082723408428244362, guid: 0ec5c5f450a222d43bb504350cef9668,
+      type: 3}
+  - key: 102_FaShi1
+    gameObject: {fileID: 8390178286515603836, guid: b4f6256d233685d44aee534fbfdcd5a7,
+      type: 3}
+  - key: 102_FaShi2
+    gameObject: {fileID: 1727265097567121586, guid: e85778d8a9ee77f45a9e83f788f8a859,
+      type: 3}
+  - key: 103_TanKe1
+    gameObject: {fileID: 7826845031907706957, guid: 341af716b834c0541b68c77cf005f967,
+      type: 3}
+  - key: 103_TanKe2
+    gameObject: {fileID: 8703472272289857565, guid: c7ea14bbe3dae5c4abfbb6472f10a617,
+      type: 3}
+  - key: 104_HuaLing1
+    gameObject: {fileID: 4356806035524072028, guid: 841fcd1ae15ca464cb77ddd20bd0838f,
+      type: 3}
+  - key: 104_HuaLing2
+    gameObject: {fileID: 5360662900998838443, guid: 98e40a79d83ae9848afb46ccf370e8eb,
+      type: 3}
+  - key: 105_ShiTouRen1
+    gameObject: {fileID: 6701645207598444984, guid: 4c3df4bb07d940c4d9475fefc22e1a3f,
+      type: 3}
+  - key: 105_ShiTouRen2
+    gameObject: {fileID: 1406910869599748700, guid: 98f059d47e3bcff47b8820108be57aa0,
+      type: 3}
+  - key: 106_ShuangLang
+    gameObject: {fileID: 8055176995576307491, guid: ab00a048eee6f304d87a70fbeec0f11b,
+      type: 3}
+  - key: 107_YeZhu1
+    gameObject: {fileID: 4716547285188507153, guid: f374ef82a1224b847a89d9ced8c0061e,
+      type: 3}
+  - key: 107_YeZhu2
+    gameObject: {fileID: 1038812016887089261, guid: 863828583a63c2b45b3a5ccef12e36f8,
+      type: 3}
+  - key: 108_Ying
+    gameObject: {fileID: 7335413179771543327, guid: 64ef564f1a76f8745895d258e4b6685c,
+      type: 3}
+  - key: 109_MoGu
+    gameObject: {fileID: 5222779747047164168, guid: aa826ec4aed283c4282858aee4631a0a,
+      type: 3}
+  - key: 110_Boss1
+    gameObject: {fileID: 8926878838564924247, guid: 01bc7247c8c483448a6e370481abc2a0,
+      type: 3}
+  - key: 111_Boss2
+    gameObject: {fileID: 1144535557539542753, guid: 0ba08e33e244a37488a4b77edb1e32d6,
+      type: 3}
+  - key: Hit1
+    gameObject: {fileID: 167638, guid: 1fa6f762a07f975418f6aa1a9414936b, type: 3}

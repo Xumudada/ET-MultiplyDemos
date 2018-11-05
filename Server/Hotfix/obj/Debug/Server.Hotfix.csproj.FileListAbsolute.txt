@@ -1,0 +1,13 @@
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.dylib
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.so
+D:\BaiduNetdiskDownload\ET-master\Bin\kcp.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\Hotfix.deps.json
+D:\BaiduNetdiskDownload\ET-master\Bin\Hotfix.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\Hotfix.pdb
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Server.Hotfix.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Server.Hotfix.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Server.Hotfix.AssemblyInfoInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Server.Hotfix.AssemblyInfo.cs
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Server.Hotfix.csproj.CopyComplete
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Hotfix.dll
+D:\BaiduNetdiskDownload\ET-master\Server\Hotfix\obj\Debug\Hotfix.pdb

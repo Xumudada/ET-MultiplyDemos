@@ -1,0 +1,10 @@
+D:\BaiduNetdiskDownload\ET-master\Bin\MongoDB.Driver.Core.deps.json
+D:\BaiduNetdiskDownload\ET-master\Bin\MongoDB.Driver.Core.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\MongoDB.Driver.Core.pdb
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.AssemblyInfoInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.AssemblyInfo.cs
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.csproj.CopyComplete
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.dll
+D:\BaiduNetdiskDownload\ET-master\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver.Core\obj\Debug\MongoDB.Driver.Core.pdb

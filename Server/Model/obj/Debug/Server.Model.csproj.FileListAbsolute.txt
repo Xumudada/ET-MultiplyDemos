@@ -1,0 +1,13 @@
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.dylib
+D:\BaiduNetdiskDownload\ET-master\Bin\libkcp.so
+D:\BaiduNetdiskDownload\ET-master\Bin\kcp.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\Model.deps.json
+D:\BaiduNetdiskDownload\ET-master\Bin\Model.dll
+D:\BaiduNetdiskDownload\ET-master\Bin\Model.pdb
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.csprojAssemblyReference.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.csproj.CoreCompileInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.AssemblyInfoInputs.cache
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.AssemblyInfo.cs
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Server.Model.csproj.CopyComplete
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Model.dll
+D:\BaiduNetdiskDownload\ET-master\Server\Model\obj\Debug\Model.pdb
