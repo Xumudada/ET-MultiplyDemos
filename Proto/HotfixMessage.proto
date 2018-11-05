@@ -1,0 +1,323 @@
+syntax = "proto3";
+import "OuterMessage.proto";
+package ETHotfix;
+
+//游戏中 客户端请求对目标施展普通攻击
+message A1013_Attack_C2M // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MobaID = 1; //被攻击目标的ID
+}
+
+//游戏中 刷新一个野怪点 
+message A1012_NewMonster_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MonsterID = 1; // Moba5V5Config中的怪物1号ID
+}
+
+//游戏中 刷新全部野怪点 
+message A1011_SpawnMonster_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+//游戏中 刷新第7波以后小兵 1炮车 1战士 1法师 
+message A1010_NewArmyWave_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+//游戏中 刷新第6波以前小兵 2战士 1法师
+message A1009_NewArmyWave_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+//游戏开始 玩家可以移动出泉水
+message A1008_GameStart_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+//玩家通知Map服务器 场景已准备就绪
+message A1007_GamerReadyMoba5V5_C2M // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+//玩家移动房间广播 当前位置和移动路径
+message A1006_PathfindingResult_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+	float X = 2;
+	float Y = 3;
+	float Z = 4;
+	repeated float Xs = 5;
+	repeated float Ys = 6;
+	repeated float Zs = 7;
+}
+
+//右键点击移动消息
+message A1005_ClickMap_C2M // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	float X = 1;
+	float Y = 2;
+	float Z = 3;
+}
+	
+//房间满足人数条件 Map通知客户端加载场景
+message A1004_CreateMoba5V5Secene_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated GamerInfo Gamers = 1;
+}
+
+//玩家信息
+message GamerInfo
+{
+	int64 UserID = 1; //玩家ID
+	int32 HeroID = 2; //英雄ID
+	int32 Index = 3; //玩家编号1-10
+}
+
+//排队玩家减少了一个
+message A1003_MatcherReduceOne_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MatchingNumber = 1;
+}
+
+//排队玩家增加了一个
+message A1003_MatcherPlusOne_M2C // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MatchingNumber = 1;
+}
+
+//玩家请求开始匹配5V5
+message A1002_StartRobotMatch5V5_C2G // IMessage
+{
+	int32 RpcId = 90;
+}
+
+//玩家请求自己的个人信息 不需要参数
+message A1001_GetUserInfo_C2G // IRequest
+{
+	int32 RpcId = 90;
+}
+
+//获得用户名和用户等级
+message A1001_GetUserInfo_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string UserName = 1;
+	int32 UserLevel = 2;
+}
+
+//客户端注册请求
+message A0001_Register_C2R // IRequest
+{
+	int32 RpcId = 90;
+	string Account = 1; //假定的账号
+	string Password = 2; //假定的密码
+}
+
+//客户端注册请求回复
+message A0001_Register_R2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+//客户端登陆请求
+message A0002_Login_C2R // IRequest
+{
+	int32 RpcId = 90;
+	string Account = 1; //假定的账号
+	string Password = 2; //假定的密码
+}
+
+message A0002_Login_R2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string GateAddress = 1;
+	int64 GateLoginKey = 2;
+}
+
+message A0003_LoginGate_C2G // IRequest
+{
+	int32 RpcId = 90;
+	int64 GateLoginKey = 1;
+}
+
+message A0003_LoginGate_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	int64 UserID = 1;
+}
+
+//Test 测试类消息
+message T0001_Ping // IMessage
+{
+	int32 RpcId = 90;
+}
+
+
+message T0002_Ping_C2R // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message T0002_Ping_R2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message T0003_Ping //IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message T0004_Ping_C2R // IActorRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message T0004_Ping_R2C // IActorResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message T0005_Ping // IActorLocationMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message T0006_Ping_C2R // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message T0006_Ping_R2C // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+message C2R_Login // IRequest
+{
+	int32 RpcId = 90;
+	string	Account	 = 1;	// 帐号
+	string	Password = 2;	// 密码
+}
+
+message R2C_Login // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Address = 1;
+	int64 Key	    = 2;
+}
+
+message C2G_LoginGate // IRequest
+{
+	int32 RpcId = 90;
+	int64 Key = 1;	// 帐号
+}
+
+message G2C_LoginGate // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	int64 PlayerId = 1;
+}
+
+message G2C_TestHotfixMessage // IMessage
+{
+	string Info = 1;
+}
+
+message C2M_TestActorRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 91;
+	string Info = 1;
+}
+
+message M2C_TestActorResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Info = 1;
+}
+
+message PlayerInfo // IMessage
+{
+	int32 RpcId = 90;
+}
+
+message C2G_PlayerInfo // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_PlayerInfo // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	PlayerInfo PlayerInfo = 1;
+	repeated PlayerInfo PlayerInfos = 2;
+    repeated string TestRepeatedString = 3;
+    repeated int32 TestRepeatedInt32 = 4;
+    repeated int64 TestRepeatedInt64 = 5;
+}
