@@ -10,6 +10,12 @@ namespace ETHotfix
         {
             User user = session.GetComponent<SessionUserComponent>().User;
 
+            //验证Session
+            if (!GateHelper.SignSession(session))
+            {
+                return;
+            }
+
             //向随机Map服务器发送创建房间请求
             Session gateSession = GateHelper.GetRandomMapSession();
 

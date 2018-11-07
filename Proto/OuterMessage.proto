@@ -1,8 +1,31 @@
 syntax = "proto3";
 package ETModel;
 
+//----斗地主
+message Card
+{
+	int32 CardWeight = 1;
+	int32 CardSuits = 2;
+}
 
+message G2C_GetUserInfo_Back // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string NickName = 1;
+	int32 Wins = 2;
+	int32 Loses = 3;
+	int64 Money = 4;
+}
 
+message C2G_GetUserInfo_Req // IRequest
+{
+	int32 RpcId = 90;
+	int64 UserID = 1;
+}
+
+//----ET
 message Actor_Test // IActorMessage
 {
 	int32 RpcId = 90;

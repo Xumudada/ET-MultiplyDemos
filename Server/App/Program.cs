@@ -89,6 +89,7 @@ namespace App
                         Game.Scene.AddComponent<UserComponent>();
                         Game.Scene.AddComponent<OnlineComponent>();
                         Game.Scene.AddComponent<Moba5V5Component>();
+                        Game.Scene.AddComponent<LandlordsComponent>();
 
                         // 发送普通actor消息
                         Game.Scene.AddComponent<ActorMessageSenderComponent>();

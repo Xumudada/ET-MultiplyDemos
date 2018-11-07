@@ -11,9 +11,9 @@ namespace ETModel
         public const int ERR_AccountAlreadyRegisted = 100001;
         public const int ERR_RepeatedAccountExist = 100002;
         public const int ERR_UserNotOnline = 100003;
-        public const int ERR_AccountAlreadyRegisted2 = 100004;
-        public const int ERR_AccountAlreadyRegisted3 = 100005;
-
+        public const int ERR_UserMoneyLessError = 100004;
+        public const int ERR_PlayCardError = 100005;
+        public const int ERR_SignError = 100006;
 
         // 小于这个Rpc会抛异常
         public const int ERR_Exception = 200000;

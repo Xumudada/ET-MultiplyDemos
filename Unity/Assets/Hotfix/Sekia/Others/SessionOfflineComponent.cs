@@ -51,6 +51,11 @@ namespace ETHotfix
             {
                 uiComponent.Remove(UIType.SekiaLobby);
             }
+            else if (uiComponent.Get(UIType.LandlordsRoom) != null)
+            {
+                uiComponent.Remove(UIType.LandlordsRoom);
+            }
+
         }
     }
 }

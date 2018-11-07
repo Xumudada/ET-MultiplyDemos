@@ -64,10 +64,90 @@
 	
 	
 	
+	/// <summary>
+	/// 斗地主
+	/// </summary>
+	//Gate通知Map玩家掉线
+	message Actor_PlayerExitRoom // IActorMessage
+    {
+		int32 RpcId = 90;
+		int64 ActorId = 94;
+    }
+	
+	//匹配阶段
+	//Map通知Gate匹配成功
+	message Actor_LandlordsMatchSucess // IActorMessage
+    {
+		int64 ActorId = 94;
+        int64 ActorIDofGamer = 1;
+    }
+
+	//Gate通知Map 玩家请求匹配
+	message G2M_EnterMatch_Landords // IMessage
+    {
+		int32 RpcId = 90;
+        int64 UserID = 1; // 玩家永久ID
+		int64 ActorIDofUser = 2; //Gate上User的Actor
+		int64 ActorIDofClient = 3; //Gate上Client的Actor
+    }
+	
+	//登陆阶段
+	//Gate通知Realm 玩家下线
+	message G2R_PlayerOffline // IMessage
+    {
+		int32 RpcId = 90;
+        int64 UserID = 1;
+    }
+	
+	//Gate通知Realm 玩家上线
+	message G2R_PlayerOnline // IMessage
+    {
+		int32 RpcId = 90;
+        int64 UserID = 1;
+        int32 GateAppID = 2;
+    }
+	
+	//Real请求Gate登陆Key
+	message R2G_GetLoginKey_Req // IRequest
+    {
+		int32 RpcId = 90;
+        int64 UserID = 1;
+    }
+
+    message G2R_GetLoginKey_Back // IResponse
+    {
+		int32 RpcId = 90;
+		int32 Error = 91;
+		string Message = 92;
+        int64 Key = 1;
+    }
+	
+	//异步踢玩家下线
+    message R2G_PlayerKickOut_Req // IRequest
+    {
+		int32 RpcId = 90;
+        int64 UserID = 1;
+    }
+
+    message G2R_PlayerKickOut_Back // IResponse
+    {
+		int32 RpcId = 90;
+		int32 Error = 91;
+		string Message = 92;
+    }
+
+
+
+
+
+
+
+
+
 	
 	
 	/// <summary>
-	/// 传送unit
+	/// ET
 	/// </summary>
 	message M2M_TrasferUnitRequest // IRequest
 	{

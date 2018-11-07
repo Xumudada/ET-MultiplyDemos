@@ -495,8 +495,15 @@
     <Compile Include="Assets\Model\Sekia\Component\GamerTrunComponent.cs" />
     <Compile Include="Assets\Model\Sekia\Entity\Gamer.cs" />
     <Compile Include="Assets\Model\Sekia\Entity\User.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\CardHelper.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\Component\LandlordsGamerPanelComponent.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\Component\LandlordsHandCardsComponent.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\MonoBehaviour\HandCardSprite.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\Object\Card.cs" />
+    <Compile Include="Assets\Model\Sekia\Landlords\Object\Type.cs" />
     <Compile Include="Assets\Model\Sekia\Sekia.cs" />
     <Compile Include="Assets\Model\Sekia\Sekia_Hotfix.cs" />
+    <Compile Include="Assets\Model\Sekia\SekiaEventIdType.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Component\UILoadingComponent.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Event\LoadingBeginEvent_CreateLoadingUI.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Event\LoadingFinishEvent_RemoveLoadingUI.cs" />

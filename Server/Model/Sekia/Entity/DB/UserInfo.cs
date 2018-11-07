@@ -19,13 +19,17 @@ namespace ETModel
         //昵称
         public string UserName { get; set; }
 
-        //胜场
+        //等级
         public int UserLevel { get; set; }
+
+        //余额
+        public long Money { get; set; }
 
         public void Awake(string name)
         {
-            this.UserName = name;
-            this.UserLevel = 1;
+            UserName = name;
+            UserLevel = 1;
+            Money = 10000;
         }
 
     }

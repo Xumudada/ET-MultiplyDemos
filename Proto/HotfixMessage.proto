@@ -240,6 +240,254 @@ message T0006_Ping_R2C // IActorLocationResponse
 
 
 
+//斗地主----
+message Actor_GamerReady_Landlords // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+}
+
+
+//返回大厅
+message C2G_ReturnLobby_Ntt // IMessage
+{
+	int32 RpcId = 90;
+}
+
+message Actor_GamerEnterRoom_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    repeated GamerInfo Gamers = 1;
+}
+
+message Actor_GamerExitRoom_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int64 UserID = 1;
+}
+
+message GamerState
+{
+    int64 UserID = 1;
+    int32 Identity = 2; //byte
+	bool GrabLandlordState = 3;
+}
+
+message Actor_GamerReconnect_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int32 Multiples = 1;
+    repeated GamerState GamersState = 2;
+    repeated ETModel.Card LordCards = 3;
+	int64 BiggstGamer = 4;
+    repeated ETModel.Card DeskCards = 5; //KeyValuePair
+}
+
+message GamerCardNum
+{
+    int64 UserID = 1;
+    int32 Num = 2;
+}
+
+message Actor_GameStart_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    repeated ETModel.Card HandCards = 1;
+    repeated GamerCardNum GamersCardNum = 2;
+}
+
+message Actor_AuthorityGrabLandlord_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int64 UserID = 1;
+}
+
+message Actor_AuthorityPlayCard_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int64 UserID = 1;
+    bool IsFirst = 2;
+}
+
+message Actor_SetMultiples_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int32 Multiples = 1;
+}
+
+message Actor_SetLandlord_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int64 UserID = 1;
+    repeated ETModel.Card LordCards = 2;
+}
+
+message GamerScore
+{
+    int64 UserID = 1;
+    int64 Score = 2;
+}
+
+message Actor_Gameover_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int32 Winner = 1; //byte
+    int64 BasePointPerMatch = 2;
+    int32 Multiples = 3;
+    repeated GamerScore GamersScore = 4;
+}
+
+message Actor_GamerMoneyLess_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    int64 UserID = 1;
+}
+
+
+
+message Actor_GamerGrabLandlordSelect_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+	bool IsGrab = 2;
+}
+
+message Actor_GamerPlayCard_Req // IActorRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	repeated ETModel.Card Cards = 1;
+	
+}
+
+message Actor_GamerPlayCard_Back // IActorResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message Actor_GamerPlayCard_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+	repeated ETModel.Card Cards = 2;
+}
+
+message Actor_GamerPrompt_Req // IActorRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+}
+
+message Actor_GamerPrompt_Back // IActorResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	repeated ETModel.Card Cards = 1;
+}
+
+message Actor_GamerDontPlay_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+}
+
+message Actor_Trusteeship_Ntt // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int64 UserID = 1;
+	bool isTrusteeship = 2;
+}
+
+
+//斗地主匹配模块
+message C2G_StartMatch_Landlords_Req // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_StartMatch_Landlords_Back // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+message Actor_LandlordsMatcherPlusOne // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MatchingNumber = 1; // 当前排队人数
+}
+
+message Actor_LandlordsMatcherReduceOne // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+	int32 MatchingNumber = 1; // 当前排队人数
+}
+	
+//斗地主登陆模块
+message C2R_Register_Req // IRequest
+{
+    int32 RpcId = 90;
+	string Account = 1;
+	string Password = 2;
+}
+
+message R2C_Register_Back // IResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+	string Message = 92;
+}
+
+message C2R_Login_Req  // IRequest
+{
+    int32 RpcId = 90;
+	string Account = 1; // 用户输入的账号
+	string Password = 2; // 用户输入的密码
+}
+
+message R2C_Login_Back // IResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+	string Message = 92;
+    int64 Key = 1;
+	string Address = 2;
+}
+
+message C2G_LoginGate_Req  // IRequest
+{
+	int32 RpcId = 90;
+	int64 Key = 1;
+}
+
+message G2C_LoginGate_Back // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	int64 UserID = 1;
+}
 
 
 
@@ -250,6 +498,15 @@ message T0006_Ping_R2C // IActorLocationResponse
 
 
 
+
+
+
+
+
+
+
+
+//ET----
 message C2R_Login // IRequest
 {
 	int32 RpcId = 90;

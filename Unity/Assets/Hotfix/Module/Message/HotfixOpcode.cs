@@ -114,6 +114,110 @@ namespace ETHotfix
 	[Message(HotfixOpcode.T0006_Ping_R2C)]
 	public partial class T0006_Ping_R2C : IActorLocationResponse {}
 
+//斗地主----
+	[Message(HotfixOpcode.Actor_GamerReady_Landlords)]
+	public partial class Actor_GamerReady_Landlords : IActorMessage {}
+
+//返回大厅
+	[Message(HotfixOpcode.C2G_ReturnLobby_Ntt)]
+	public partial class C2G_ReturnLobby_Ntt : IMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerEnterRoom_Ntt)]
+	public partial class Actor_GamerEnterRoom_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerExitRoom_Ntt)]
+	public partial class Actor_GamerExitRoom_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.GamerState)]
+	public partial class GamerState {}
+
+	[Message(HotfixOpcode.Actor_GamerReconnect_Ntt)]
+	public partial class Actor_GamerReconnect_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.GamerCardNum)]
+	public partial class GamerCardNum {}
+
+	[Message(HotfixOpcode.Actor_GameStart_Ntt)]
+	public partial class Actor_GameStart_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_AuthorityGrabLandlord_Ntt)]
+	public partial class Actor_AuthorityGrabLandlord_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_AuthorityPlayCard_Ntt)]
+	public partial class Actor_AuthorityPlayCard_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_SetMultiples_Ntt)]
+	public partial class Actor_SetMultiples_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_SetLandlord_Ntt)]
+	public partial class Actor_SetLandlord_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.GamerScore)]
+	public partial class GamerScore {}
+
+	[Message(HotfixOpcode.Actor_Gameover_Ntt)]
+	public partial class Actor_Gameover_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerMoneyLess_Ntt)]
+	public partial class Actor_GamerMoneyLess_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerGrabLandlordSelect_Ntt)]
+	public partial class Actor_GamerGrabLandlordSelect_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerPlayCard_Req)]
+	public partial class Actor_GamerPlayCard_Req : IActorRequest {}
+
+	[Message(HotfixOpcode.Actor_GamerPlayCard_Back)]
+	public partial class Actor_GamerPlayCard_Back : IActorResponse {}
+
+	[Message(HotfixOpcode.Actor_GamerPlayCard_Ntt)]
+	public partial class Actor_GamerPlayCard_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_GamerPrompt_Req)]
+	public partial class Actor_GamerPrompt_Req : IActorRequest {}
+
+	[Message(HotfixOpcode.Actor_GamerPrompt_Back)]
+	public partial class Actor_GamerPrompt_Back : IActorResponse {}
+
+	[Message(HotfixOpcode.Actor_GamerDontPlay_Ntt)]
+	public partial class Actor_GamerDontPlay_Ntt : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_Trusteeship_Ntt)]
+	public partial class Actor_Trusteeship_Ntt : IActorMessage {}
+
+//斗地主匹配模块
+	[Message(HotfixOpcode.C2G_StartMatch_Landlords_Req)]
+	public partial class C2G_StartMatch_Landlords_Req : IRequest {}
+
+	[Message(HotfixOpcode.G2C_StartMatch_Landlords_Back)]
+	public partial class G2C_StartMatch_Landlords_Back : IResponse {}
+
+	[Message(HotfixOpcode.Actor_LandlordsMatcherPlusOne)]
+	public partial class Actor_LandlordsMatcherPlusOne : IActorMessage {}
+
+	[Message(HotfixOpcode.Actor_LandlordsMatcherReduceOne)]
+	public partial class Actor_LandlordsMatcherReduceOne : IActorMessage {}
+
+//斗地主登陆模块
+	[Message(HotfixOpcode.C2R_Register_Req)]
+	public partial class C2R_Register_Req : IRequest {}
+
+	[Message(HotfixOpcode.R2C_Register_Back)]
+	public partial class R2C_Register_Back : IResponse {}
+
+	[Message(HotfixOpcode.C2R_Login_Req)]
+	public partial class C2R_Login_Req : IRequest {}
+
+	[Message(HotfixOpcode.R2C_Login_Back)]
+	public partial class R2C_Login_Back : IResponse {}
+
+	[Message(HotfixOpcode.C2G_LoginGate_Req)]
+	public partial class C2G_LoginGate_Req : IRequest {}
+
+	[Message(HotfixOpcode.G2C_LoginGate_Back)]
+	public partial class G2C_LoginGate_Back : IResponse {}
+
+//ET----
 	[Message(HotfixOpcode.C2R_Login)]
 	public partial class C2R_Login : IRequest {}
 
@@ -180,15 +284,48 @@ namespace ETHotfix
 		 public const ushort T0005_Ping = 10029;
 		 public const ushort T0006_Ping_C2R = 10030;
 		 public const ushort T0006_Ping_R2C = 10031;
-		 public const ushort C2R_Login = 10032;
-		 public const ushort R2C_Login = 10033;
-		 public const ushort C2G_LoginGate = 10034;
-		 public const ushort G2C_LoginGate = 10035;
-		 public const ushort G2C_TestHotfixMessage = 10036;
-		 public const ushort C2M_TestActorRequest = 10037;
-		 public const ushort M2C_TestActorResponse = 10038;
-		 public const ushort PlayerInfo = 10039;
-		 public const ushort C2G_PlayerInfo = 10040;
-		 public const ushort G2C_PlayerInfo = 10041;
+		 public const ushort Actor_GamerReady_Landlords = 10032;
+		 public const ushort C2G_ReturnLobby_Ntt = 10033;
+		 public const ushort Actor_GamerEnterRoom_Ntt = 10034;
+		 public const ushort Actor_GamerExitRoom_Ntt = 10035;
+		 public const ushort GamerState = 10036;
+		 public const ushort Actor_GamerReconnect_Ntt = 10037;
+		 public const ushort GamerCardNum = 10038;
+		 public const ushort Actor_GameStart_Ntt = 10039;
+		 public const ushort Actor_AuthorityGrabLandlord_Ntt = 10040;
+		 public const ushort Actor_AuthorityPlayCard_Ntt = 10041;
+		 public const ushort Actor_SetMultiples_Ntt = 10042;
+		 public const ushort Actor_SetLandlord_Ntt = 10043;
+		 public const ushort GamerScore = 10044;
+		 public const ushort Actor_Gameover_Ntt = 10045;
+		 public const ushort Actor_GamerMoneyLess_Ntt = 10046;
+		 public const ushort Actor_GamerGrabLandlordSelect_Ntt = 10047;
+		 public const ushort Actor_GamerPlayCard_Req = 10048;
+		 public const ushort Actor_GamerPlayCard_Back = 10049;
+		 public const ushort Actor_GamerPlayCard_Ntt = 10050;
+		 public const ushort Actor_GamerPrompt_Req = 10051;
+		 public const ushort Actor_GamerPrompt_Back = 10052;
+		 public const ushort Actor_GamerDontPlay_Ntt = 10053;
+		 public const ushort Actor_Trusteeship_Ntt = 10054;
+		 public const ushort C2G_StartMatch_Landlords_Req = 10055;
+		 public const ushort G2C_StartMatch_Landlords_Back = 10056;
+		 public const ushort Actor_LandlordsMatcherPlusOne = 10057;
+		 public const ushort Actor_LandlordsMatcherReduceOne = 10058;
+		 public const ushort C2R_Register_Req = 10059;
+		 public const ushort R2C_Register_Back = 10060;
+		 public const ushort C2R_Login_Req = 10061;
+		 public const ushort R2C_Login_Back = 10062;
+		 public const ushort C2G_LoginGate_Req = 10063;
+		 public const ushort G2C_LoginGate_Back = 10064;
+		 public const ushort C2R_Login = 10065;
+		 public const ushort R2C_Login = 10066;
+		 public const ushort C2G_LoginGate = 10067;
+		 public const ushort G2C_LoginGate = 10068;
+		 public const ushort G2C_TestHotfixMessage = 10069;
+		 public const ushort C2M_TestActorRequest = 10070;
+		 public const ushort M2C_TestActorResponse = 10071;
+		 public const ushort PlayerInfo = 10072;
+		 public const ushort C2G_PlayerInfo = 10073;
+		 public const ushort G2C_PlayerInfo = 10074;
 	}
 }

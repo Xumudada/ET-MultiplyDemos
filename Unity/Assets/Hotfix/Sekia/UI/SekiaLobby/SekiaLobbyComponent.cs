@@ -37,7 +37,9 @@ namespace ETHotfix
             level = rc.Get<GameObject>("Level").GetComponent<Text>();
 
             //添加事件
-            rc.Get<GameObject>("RobotMatch").GetComponent<Button>().onClick.Add(OnStartRobotMatch5V5);
+            rc.Get<GameObject>("Moba5V5").GetComponent<Button>().onClick.Add(OnStartMatchMoba5V5);
+            rc.Get<GameObject>("Landlords").GetComponent<Button>().onClick.Add(OnStartMatchLandlords);
+            //添加新的匹配目标
 
             //获取玩家数据
             A1001_GetUserInfo_C2G GetUserInfo_Req = new A1001_GetUserInfo_C2G();
@@ -49,9 +51,9 @@ namespace ETHotfix
         }
 
         /// <summary>
-        /// 开始匹配按钮事件
+        /// 匹配Moba5V5
         /// </summary>
-        public void OnStartRobotMatch5V5()
+        public void OnStartMatchMoba5V5()
         {
             try
             {
@@ -65,5 +67,34 @@ namespace ETHotfix
                 Log.Error(e.ToStr());
             }
         }
+
+        /// <summary>
+        /// 匹配斗地主
+        /// </summary>
+        public async void OnStartMatchLandlords()
+        {
+            try
+            {
+                //发送开始匹配消息
+                C2G_StartMatch_Landlords_Req c2G_StartMatch_Req = new C2G_StartMatch_Landlords_Req();
+                G2C_StartMatch_Landlords_Back g2C_StartMatch_Ack = (G2C_StartMatch_Landlords_Back)await SessionComponent.Instance.Session.Call(c2G_StartMatch_Req);
+
+                if (g2C_StartMatch_Ack.Error == ErrorCode.ERR_UserMoneyLessError)
+                {
+                    Log.Error("余额不足");
+                    return;
+                }
+
+                //切换到房间界面
+                UI room = Game.Scene.GetComponent<UIComponent>().Create(UIType.LandlordsRoom);
+                Game.Scene.GetComponent<UIComponent>().Remove(UIType.SekiaLobby);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.ToStr());
+            }
+        }
+
+        //添加新的匹配目标...
     }
 }

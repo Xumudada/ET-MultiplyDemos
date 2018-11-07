@@ -97,7 +97,112 @@ namespace ETModel
 	}
 
 /// <summary>
-/// 传送unit
+/// 斗地主
+/// </summary>
+//Gate通知Map玩家掉线
+	[Message(InnerOpcode.Actor_PlayerExitRoom)]
+	public partial class Actor_PlayerExitRoom: IActorMessage
+	{
+		public int RpcId { get; set; }
+
+		public long ActorId { get; set; }
+
+	}
+
+//匹配阶段
+//Map通知Gate匹配成功
+	[Message(InnerOpcode.Actor_LandlordsMatchSucess)]
+	public partial class Actor_LandlordsMatchSucess: IActorMessage
+	{
+		public long ActorId { get; set; }
+
+		public long ActorIDofGamer { get; set; }
+
+	}
+
+//Gate通知Map 玩家请求匹配
+	[Message(InnerOpcode.G2M_EnterMatch_Landords)]
+	public partial class G2M_EnterMatch_Landords: IMessage
+	{
+		public int RpcId { get; set; }
+
+		public long UserID { get; set; }
+
+		public long ActorIDofUser { get; set; }
+
+		public long ActorIDofClient { get; set; }
+
+	}
+
+//登陆阶段
+//Gate通知Realm 玩家下线
+	[Message(InnerOpcode.G2R_PlayerOffline)]
+	public partial class G2R_PlayerOffline: IMessage
+	{
+		public int RpcId { get; set; }
+
+		public long UserID { get; set; }
+
+	}
+
+//Gate通知Realm 玩家上线
+	[Message(InnerOpcode.G2R_PlayerOnline)]
+	public partial class G2R_PlayerOnline: IMessage
+	{
+		public int RpcId { get; set; }
+
+		public long UserID { get; set; }
+
+		public int GateAppID { get; set; }
+
+	}
+
+//Real请求Gate登陆Key
+	[Message(InnerOpcode.R2G_GetLoginKey_Req)]
+	public partial class R2G_GetLoginKey_Req: IRequest
+	{
+		public int RpcId { get; set; }
+
+		public long UserID { get; set; }
+
+	}
+
+	[Message(InnerOpcode.G2R_GetLoginKey_Back)]
+	public partial class G2R_GetLoginKey_Back: IResponse
+	{
+		public int RpcId { get; set; }
+
+		public int Error { get; set; }
+
+		public string Message { get; set; }
+
+		public long Key { get; set; }
+
+	}
+
+//异步踢玩家下线
+	[Message(InnerOpcode.R2G_PlayerKickOut_Req)]
+	public partial class R2G_PlayerKickOut_Req: IRequest
+	{
+		public int RpcId { get; set; }
+
+		public long UserID { get; set; }
+
+	}
+
+	[Message(InnerOpcode.G2R_PlayerKickOut_Back)]
+	public partial class G2R_PlayerKickOut_Back: IResponse
+	{
+		public int RpcId { get; set; }
+
+		public int Error { get; set; }
+
+		public string Message { get; set; }
+
+	}
+
+/// <summary>
+/// ET
 /// </summary>
 	[Message(InnerOpcode.M2M_TrasferUnitRequest)]
 	public partial class M2M_TrasferUnitRequest: IRequest
