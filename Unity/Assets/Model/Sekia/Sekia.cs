@@ -30,7 +30,9 @@ namespace ETModel
                 Game.Scene.AddComponent<UIComponent>();
 
                 Game.Scene.AddComponent<GamerComponent>();
-                
+                Game.Scene.AddComponent<FUIPackageComponent>();
+                Game.Scene.AddComponent<FUIComponent>();
+
                 // 下载ab包
                 await BundleHelper.DownloadBundle();
 
