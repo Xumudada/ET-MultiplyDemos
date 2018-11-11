@@ -8,6 +8,28 @@ ET主群：474643097
 希望参与完善游戏/推荐代码可联系咲夜詩
 QQ449224404
 
+ET版本升级指南：
+Unity部分，同时打开旧的客户端和全新的ET客户端，按顺序将文件夹拖入新客户端：
+Res/Config/* （自定义配置）
+Bundles/Sekia（删除Bundles目录下原有文件）
+Editor/Sekia （删除ExcelExporterEditor文件夹）
+Hotfix/Sekia
+Model/Sekia
+Scenes/* （删除默认场景）
+覆盖Model/Module/Message/ErrorCode.cs （和服务端共享ErrorCode）
+覆盖Model/Entity/Scene.cs （自定义场景名）
+编译Protoc一次
+Tools/导出配置/导出客户端配置一次
+
+修复缺失partial关键字的错误后升级完成
+
+Server部分，同时打开旧的Server目录和全新的Server目录，复制粘贴文件或文件夹：
+Server/App/Program.cs
+Server/Hotfix/Sekia
+Server/Model/Sekia
+Server/otfix/Module/Message/OuterMessageDispatcher.cs
+
+
 后续操作：
 
 使用3dmax等工具拆解出地图上的防御塔

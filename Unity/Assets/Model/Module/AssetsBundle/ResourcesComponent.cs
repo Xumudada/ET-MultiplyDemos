@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,14 +28,14 @@ namespace ETModel
 			}
 		}
 
-		public AssetBundle AssetBundle { get; }
+		public AssetBundle AssetBundle { get; private set; }
 
 		public ABInfo(string name, AssetBundle ab)
 		{
 			this.Name = name;
 			this.AssetBundle = ab;
 			this.RefCount = 1;
-			//Log.Debug($"load assetbundle: {this.Name}");
+			Log.Debug($"load assetbundle: {this.Name} {this.InstanceId}");
 		}
 
 		public override void Dispose()
@@ -45,12 +44,17 @@ namespace ETModel
 			{
 				return;
 			}
+			
+			Log.Debug($"desdroy assetbundle: {this.Name} {this.InstanceId}");
 
 			base.Dispose();
 
-			//Log.Debug($"desdroy assetbundle: {this.Name}");
+			if (this.AssetBundle != null)
+			{
+				this.AssetBundle.Unload(true);
+			}
 
-			this.AssetBundle?.Unload(true);
+			this.AssetBundle = null;
 		}
 	}
 	
@@ -90,7 +94,7 @@ namespace ETModel
 				return result;
 			}
 
-			result = value + ".unity3d";
+			result = value.ToLower() + ".unity3d";
 			StringToABDict[value] = result;
 			return result;
 		}
@@ -211,6 +215,16 @@ namespace ETModel
 			}
 
 			return resource;
+		}
+
+		public AssetBundle GetAssetBundle(string abName)
+		{
+			ABInfo abInfo;
+			if (!this.bundles.TryGetValue(abName, out abInfo))
+			{
+				throw new Exception($"not found bundle: {abName}");
+			}
+			return abInfo.AssetBundle;
 		}
 
 		public void UnloadBundle(string assetBundleName)

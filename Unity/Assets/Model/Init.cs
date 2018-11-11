@@ -1,7 +1,5 @@
 ﻿using System;
-using System.IO;
 using System.Threading;
-using Google.Protobuf;
 using UnityEngine;
 
 namespace ETModel
@@ -27,7 +25,8 @@ namespace ETModel
 				Game.Scene.AddComponent<ResourcesComponent>();
 				Game.Scene.AddComponent<PlayerComponent>();
 				Game.Scene.AddComponent<UnitComponent>();
-				Game.Scene.AddComponent<UIComponent>();
+				Game.Scene.AddComponent<FUIPackageComponent>();
+				Game.Scene.AddComponent<FUIComponent>();
 
 				// 下载ab包
 				await BundleHelper.DownloadBundle();

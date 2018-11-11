@@ -13,6 +13,10 @@ namespace ETModel
     {
         private readonly IAwaiter awaiter;
 
+        public void NoAwait()
+        {
+        }
+
         [DebuggerHidden]
         public ETTask(IAwaiter awaiter)
         {
@@ -143,6 +147,10 @@ namespace ETModel
         {
             this.result = default;
             this.awaiter = awaiter;
+        }
+        
+        public void NoAwait()
+        {
         }
 
         [DebuggerHidden]

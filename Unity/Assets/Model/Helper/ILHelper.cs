@@ -7,7 +7,6 @@ using ILRuntime.CLR.TypeSystem;
 using ILRuntime.Runtime.Enviorment;
 using ILRuntime.Runtime.Generated;
 using ILRuntime.Runtime.Intepreter;
-using UnityEngine;
 
 namespace ETModel
 {
@@ -28,6 +27,14 @@ namespace ETModel
 			appdomain.DelegateManager.RegisterMethodDelegate<ILTypeInstance>();
 			appdomain.DelegateManager.RegisterFunctionDelegate<Google.Protobuf.Adapt_IMessage.Adaptor>();
 			appdomain.DelegateManager.RegisterMethodDelegate<Google.Protobuf.Adapt_IMessage.Adaptor>();
+			appdomain.DelegateManager.RegisterDelegateConvertor<FairyGUI.EventCallback0>((act) =>
+			{
+				return new FairyGUI.EventCallback0(() =>
+				{
+					((Action)act)();
+				});
+			});
+
 
 			CLRBindings.Initialize(appdomain);
 
