@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ETModel;
 using FairyGUI;
 
 namespace ETModel
@@ -25,6 +26,10 @@ namespace ETModel
 			get
 			{
 				return this.GObject.name;
+			}
+			set
+			{
+				this.GObject.name = value;
 			}
 		}
 
@@ -121,8 +126,8 @@ namespace ETModel
 				throw new Exception($"this ui is not GComponent, so has not child, {this.Name}");
 			}
 
-			GComponent childComponent = gComponent.GetChild(name).asCom;
-			child = ComponentFactory.Create<FUI, GComponent>(childComponent);
+			GObject gObject = gComponent.GetChild(name);
+			child = ComponentFactory.Create<FUI, GObject>(gObject);
 			this.Add(child);
 			
 			return child;
@@ -137,34 +142,6 @@ namespace ETModel
 			set
 			{
 				this.GObject.visible = value;
-			}
-		}
-
-		public void Show()
-		{
-			if (this.GObject.visible)
-			{
-				return;
-			}
-			this.GObject.visible = true;
-
-			if (this.GObject is GWindow gWindow)
-			{
-				gWindow.Show();
-			}
-		}
-
-		public void Hide()
-		{
-			if (!this.GObject.visible)
-			{
-				return;
-			}
-			this.GObject.visible = true;
-
-			if (this.GObject is GWindow gWindow)
-			{
-				gWindow.Hide();
 			}
 		}
 	}

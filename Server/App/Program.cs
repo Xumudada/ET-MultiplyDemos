@@ -90,6 +90,8 @@ namespace App
                         Game.Scene.AddComponent<OnlineComponent>();
                         Game.Scene.AddComponent<Moba5V5Component>();
                         Game.Scene.AddComponent<LandlordsComponent>();
+                        Game.Scene.AddComponent<DBComponent>();
+                        Game.Scene.AddComponent<DBProxyComponent>();
 
                         // 发送普通actor消息
                         Game.Scene.AddComponent<ActorMessageSenderComponent>();
@@ -97,8 +99,8 @@ namespace App
 						// 发送location actor消息
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
 						
-						Game.Scene.AddComponent<DBComponent>();
-						Game.Scene.AddComponent<DBProxyComponent>();
+						//Game.Scene.AddComponent<DBComponent>();
+						//Game.Scene.AddComponent<DBProxyComponent>();
 						
 						// location server需要的组件
 						Game.Scene.AddComponent<LocationComponent>();
@@ -129,7 +131,8 @@ namespace App
 						
 						Game.Scene.AddComponent<PlayerComponent>();
 						Game.Scene.AddComponent<UnitComponent>();
-						
+
+						Game.Scene.AddComponent<ConsoleComponent>();
 						// Game.Scene.AddComponent<HttpComponent>();
 						break;
 					case AppType.Benchmark:

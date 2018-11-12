@@ -46,8 +46,8 @@ namespace ETModel
                 Game.Scene.AddComponent<MessageDispatcherComponent>();
 
                 Game.Hotfix.GotoHotfix();
-
-                Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
+                
+                //Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
             }
             catch (Exception e)
             {

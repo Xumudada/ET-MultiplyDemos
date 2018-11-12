@@ -1,6 +1,6 @@
 ﻿namespace ETModel
 {
-	public static class SceneType
+	public static partial class SceneType
 	{
 		public const string Share = "Share";
 		public const string Game = "Game";
@@ -11,8 +11,7 @@
 		public const string Robot = "Robot";
 		public const string RobotClient = "RobotClient";
 		public const string Realm = "Realm";
-        public const string Moba5V5Map = "Moba5V5Map";
-    }
+	}
 	
 	public sealed class Scene: Entity
 	{

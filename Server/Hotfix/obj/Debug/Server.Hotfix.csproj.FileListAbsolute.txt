@@ -1,16 +1,3 @@
-D:\Soft\ET-Branch_FGUI\Bin\libkcp.dylib
-D:\Soft\ET-Branch_FGUI\Bin\libkcp.so
-D:\Soft\ET-Branch_FGUI\Bin\kcp.dll
-D:\Soft\ET-Branch_FGUI\Bin\Hotfix.deps.json
-D:\Soft\ET-Branch_FGUI\Bin\Hotfix.dll
-D:\Soft\ET-Branch_FGUI\Bin\Hotfix.pdb
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Server.Hotfix.csprojAssemblyReference.cache
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Server.Hotfix.csproj.CoreCompileInputs.cache
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Server.Hotfix.AssemblyInfoInputs.cache
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Server.Hotfix.AssemblyInfo.cs
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Server.Hotfix.csproj.CopyComplete
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Hotfix.dll
-D:\Soft\ET-Branch_FGUI\Server\Hotfix\obj\Debug\Hotfix.pdb
 D:\ET-MultiplyDemos\Bin\libkcp.dylib
 D:\ET-MultiplyDemos\Bin\libkcp.so
 D:\ET-MultiplyDemos\Bin\kcp.dll

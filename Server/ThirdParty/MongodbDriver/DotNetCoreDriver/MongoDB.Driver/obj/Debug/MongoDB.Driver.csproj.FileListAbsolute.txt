@@ -1,13 +1,3 @@
-D:\Soft\ET-Branch_FGUI\Bin\MongoDB.Driver.deps.json
-D:\Soft\ET-Branch_FGUI\Bin\MongoDB.Driver.dll
-D:\Soft\ET-Branch_FGUI\Bin\MongoDB.Driver.pdb
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.csprojAssemblyReference.cache
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.csproj.CoreCompileInputs.cache
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.AssemblyInfoInputs.cache
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.AssemblyInfo.cs
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.csproj.CopyComplete
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.dll
-D:\Soft\ET-Branch_FGUI\Server\ThirdParty\MongodbDriver\DotNetCoreDriver\MongoDB.Driver\obj\Debug\MongoDB.Driver.pdb
 D:\ET-MultiplyDemos\Bin\MongoDB.Driver.deps.json
 D:\ET-MultiplyDemos\Bin\MongoDB.Driver.dll
 D:\ET-MultiplyDemos\Bin\MongoDB.Driver.pdb

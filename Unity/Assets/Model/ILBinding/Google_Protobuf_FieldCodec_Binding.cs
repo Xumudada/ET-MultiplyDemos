@@ -22,6 +22,9 @@ namespace ILRuntime.Runtime.Generated
             MethodBase method;
             Type[] args;
             Type type = typeof(Google.Protobuf.FieldCodec);
+            args = new Type[]{typeof(System.UInt32)};
+            method = type.GetMethod("ForFloat", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, ForFloat_0);
             Dictionary<string, List<MethodInfo>> genericMethods = new Dictionary<string, List<MethodInfo>>();
             List<MethodInfo> lst = null;                    
             foreach(var m in type.GetMethods())
@@ -44,7 +47,21 @@ namespace ILRuntime.Runtime.Generated
                     if(m.GetParameters().Length == 2)
                     {
                         method = m.MakeGenericMethod(args);
-                        app.RegisterCLRMethodRedirection(method, ForMessage_0);
+                        app.RegisterCLRMethodRedirection(method, ForMessage_1);
+
+                        break;
+                    }
+                }
+            }
+            args = new Type[]{typeof(ETModel.Card)};
+            if (genericMethods.TryGetValue("ForMessage", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.GetParameters().Length == 2)
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, ForMessage_2);
 
                         break;
                     }
@@ -52,19 +69,34 @@ namespace ILRuntime.Runtime.Generated
             }
             args = new Type[]{typeof(System.UInt32)};
             method = type.GetMethod("ForString", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ForString_1);
+            app.RegisterCLRMethodRedirection(method, ForString_3);
             args = new Type[]{typeof(System.UInt32)};
             method = type.GetMethod("ForInt32", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ForInt32_2);
+            app.RegisterCLRMethodRedirection(method, ForInt32_4);
             args = new Type[]{typeof(System.UInt32)};
             method = type.GetMethod("ForInt64", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ForInt64_3);
+            app.RegisterCLRMethodRedirection(method, ForInt64_5);
 
 
         }
 
 
-        static StackObject* ForMessage_0(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ForFloat_0(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.UInt32 @tag = (uint)ptr_of_this_method->Value;
+
+
+            var result_of_this_method = Google.Protobuf.FieldCodec.ForFloat(@tag);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* ForMessage_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -83,7 +115,26 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* ForString_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ForMessage_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            Google.Protobuf.MessageParser<ETModel.Card> @parser = (Google.Protobuf.MessageParser<ETModel.Card>)typeof(Google.Protobuf.MessageParser<ETModel.Card>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
+            __intp.Free(ptr_of_this_method);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            System.UInt32 @tag = (uint)ptr_of_this_method->Value;
+
+
+            var result_of_this_method = Google.Protobuf.FieldCodec.ForMessage<ETModel.Card>(@tag, @parser);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* ForString_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -98,7 +149,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* ForInt32_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ForInt32_4(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -113,7 +164,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* ForInt64_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* ForInt64_5(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;

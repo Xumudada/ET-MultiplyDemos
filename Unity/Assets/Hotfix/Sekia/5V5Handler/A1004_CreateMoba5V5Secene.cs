@@ -22,7 +22,6 @@ namespace ETHotfix
             {
                 return;
             }
-            BackgroundImageSet.BackgroundImageOn();
             uiComponent.Create(UIType.Moba5V5UI);
             uiComponent.Remove(UIType.SekiaLobby);
 
@@ -121,7 +120,6 @@ namespace ETHotfix
 
             //初始加载完成
             SessionComponent.Instance.Session.Send(new A1007_GamerReadyMoba5V5_C2M());
-            BackgroundImageSet.BackgroundImageOff();
             //等待服务端通知游戏计时开始
             //等待服务端通知刷新第一波小兵
             //等待服务端通知刷新普通野怪

@@ -39,7 +39,7 @@ namespace ETHotfix
             }
 
             UI uiLogin = uiComponent.Create(UIType.SekiaLogin);
-            uiLogin.GetComponent<SekiaLoginComponent>().SetPrompt("连接断开");
+            //uiLogin.GetComponent<SekiaLoginComponent>().("连接断开");
             
             if (uiComponent.Get(UIType.Moba5V5UI) != null)
             {

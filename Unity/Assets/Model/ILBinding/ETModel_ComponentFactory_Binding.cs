@@ -49,6 +49,34 @@ namespace ILRuntime.Runtime.Generated
                     }
                 }
             }
+            args = new Type[]{typeof(ETModel.Gamer), typeof(System.Int64)};
+            if (genericMethods.TryGetValue("Create", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.GetParameters().Length == 1)
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, Create_1);
+
+                        break;
+                    }
+                }
+            }
+            args = new Type[]{typeof(ETModel.Gamer)};
+            if (genericMethods.TryGetValue("Create", out lst))
+            {
+                foreach(var m in lst)
+                {
+                    if(m.GetParameters().Length == 0)
+                    {
+                        method = m.MakeGenericMethod(args);
+                        app.RegisterCLRMethodRedirection(method, Create_2);
+
+                        break;
+                    }
+                }
+            }
 
 
         }
@@ -65,6 +93,32 @@ namespace ILRuntime.Runtime.Generated
 
 
             var result_of_this_method = ETModel.ComponentFactory.CreateWithId<ETModel.Player>(@id);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* Create_1(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 1);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int64 @a = *(long*)&ptr_of_this_method->Value;
+
+
+            var result_of_this_method = ETModel.ComponentFactory.Create<ETModel.Gamer, System.Int64>(@a);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* Create_2(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 0);
+
+
+            var result_of_this_method = ETModel.ComponentFactory.Create<ETModel.Gamer>();
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }

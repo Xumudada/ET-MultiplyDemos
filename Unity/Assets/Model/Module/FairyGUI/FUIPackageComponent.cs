@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using FairyGUI;
+#if !UNITY_EDITOR
 using UnityEngine;
+#endif
 
 namespace ETModel
 {
@@ -31,15 +33,6 @@ namespace ETModel
         
 		public async ETTask AddPackageAsync(string type)
 		{
-            string uiBundleName = type.StringToAB();
-            ResourcesComponent resourcesComponent = Game.Scene.GetComponent<ResourcesComponent>();
-            await resourcesComponent.LoadBundleAsync(uiBundleName);
-
-            AssetBundle assetBundle = resourcesComponent.GetAssetBundle(uiBundleName);
-            UIPackage uiPackage = UIPackage.AddPackage(assetBundle);
-            this.packages.Add(type, uiPackage);
-
-            /*
 #if UNITY_EDITOR
 			await ETTask.CompletedTask;
             
@@ -53,8 +46,7 @@ namespace ETModel
             UIPackage uiPackage = UIPackage.AddPackage(assetBundle);
 #endif
 			this.packages.Add(type, uiPackage);
-            */
-        }
+		}
 
 		public void RemovePackage(string type)
 		{

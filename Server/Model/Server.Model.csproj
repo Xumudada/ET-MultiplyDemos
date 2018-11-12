@@ -44,6 +44,9 @@
     <Compile Include="..\..\Unity\Assets\Model\Base\Async\MoveNextRunner.cs">
       <Link>Base\Async\MoveNextRunner.cs</Link>
     </Compile>
+    <Compile Include="..\..\Unity\Assets\Model\Base\Helper\MongoHelper.cs">
+      <Link>Base\Helper\MongoHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\IDeserializeSystem.cs">
       <Link>Base\Base\IDeserializeSystem.cs</Link>
     </Compile>
@@ -328,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.2.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Scripting" Version="2.9.0" />
     <PackageReference Include="NLog" Version="4.5.4" />
     <PackageReference Include="SharpZipLib" Version="1.0.0-alpha2" />
   </ItemGroup>

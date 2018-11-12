@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="4zv3tw5y" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="e3631" name="pic1.jpg" path="/SekiaLogin/Resource/" exported="true" scale="" scale9grid="480,270,960,540"/>
+    <component id="d4502" name="SekiaLogin.xml" path="/SekiaLogin/" exported="true"/>
+    <image id="d4503" name="2.png" path="/Effect/Resource/" exported="true"/>
+    <image id="d4504" name="3.png" path="/Effect/Resource/" exported="true"/>
+    <image id="d4505" name="b4.png" path="/SekiaLogin/Resource/" exported="true"/>
+    <image id="d4506" name="b5.png" path="/SekiaLogin/Resource/" exported="true"/>
+    <sound id="d4507" name="BUZZ4.wav" path="/SekiaLogin/Resource/" exported="true"/>
+    <component id="d4509" name="boss_effect.xml" path="/Effect/" exported="true"/>
+    <component id="d450a" name="AcountInput.xml" path="/SekiaLogin/" exported="true"/>
+    <component id="hagnc" name="Button.xml" path="/SekiaLogin/" exported="true"/>
+    <image id="hagnf" name="8.png" path="/SekiaLogin/Resource/" scale="9grid" scale9grid="31,26,62,52"/>
+    <component id="i14kj" name="PasswordInput.xml" path="/SekiaLogin/" exported="true"/>
+  </resources>
+  <publish name="Sekia"/>
+</packageDescription>

@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Moba5V5Map.unity
-    guid: 57446ff4030ebcc4c95e12f3f7f11325
-  - enabled: 1
     path: Assets/Scenes/Sekia.unity
-    guid: dbc5624638b4d08499b39e6f3e0405e3
+    guid: 74f880d3b39042446bbd680cd062ca4e
+  - enabled: 1
+    path: Assets/Scenes/Moba5V5Map.unity
+    guid: 0445d39e1a5dab94e845b58cf09b3a8e
   m_configObjects: {}

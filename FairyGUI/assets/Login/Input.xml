@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="200,50" extention="Label">
+<component size="200,50" extention="Label" adaptationTest="FitSize">
   <displayList>
     <graph id="n1_w4q2" name="n1" xy="0,0" size="200,50" type="rect">
       <relation target="" sidePair="width-width,height-height"/>
