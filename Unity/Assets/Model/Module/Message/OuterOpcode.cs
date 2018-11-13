@@ -1,6 +1,36 @@
 using ETModel;
 namespace ETModel
 {
+//玩家请求自己的个人信息 不需要参数
+	[Message(OuterOpcode.A0008_GetUserInfo_C2G)]
+	public partial class A0008_GetUserInfo_C2G : IRequest {}
+
+//获得用户名和用户等级
+	[Message(OuterOpcode.A0008_GetUserInfo_G2C)]
+	public partial class A0008_GetUserInfo_G2C : IResponse {}
+
+//单个角色的简要描述
+	[Message(OuterOpcode.CharacterInfo)]
+	public partial class CharacterInfo {}
+
+//职业编号
+//宠物编号
+//模型编号
+//武器编号
+//区域类型
+	[Message(OuterOpcode.A0003_LoginGate_C2G)]
+	public partial class A0003_LoginGate_C2G : IRequest {}
+
+	[Message(OuterOpcode.A0003_LoginGate_G2C)]
+	public partial class A0003_LoginGate_G2C : IResponse {}
+
+//客户端登陆请求
+	[Message(OuterOpcode.A0002_Login_C2R)]
+	public partial class A0002_Login_C2R : IRequest {}
+
+	[Message(OuterOpcode.A0002_Login_R2C)]
+	public partial class A0002_Login_R2C : IResponse {}
+
 //客户端注册请求
 	[Message(OuterOpcode.A0001_Register_C2R)]
 	public partial class A0001_Register_C2R : IRequest {}
@@ -75,26 +105,33 @@ namespace ETModel
 {
 	public static partial class OuterOpcode
 	{
-		 public const ushort A0001_Register_C2R = 101;
-		 public const ushort A0001_Register_R2C = 102;
-		 public const ushort Card = 103;
-		 public const ushort G2C_GetUserInfo_Back = 104;
-		 public const ushort C2G_GetUserInfo_Req = 105;
-		 public const ushort Actor_Test = 106;
-		 public const ushort C2M_TestRequest = 107;
-		 public const ushort M2C_TestResponse = 108;
-		 public const ushort Actor_TransferRequest = 109;
-		 public const ushort Actor_TransferResponse = 110;
-		 public const ushort C2G_EnterMap = 111;
-		 public const ushort G2C_EnterMap = 112;
-		 public const ushort UnitInfo = 113;
-		 public const ushort M2C_CreateUnits = 114;
-		 public const ushort Frame_ClickMap = 115;
-		 public const ushort M2C_PathfindingResult = 116;
-		 public const ushort C2R_Ping = 117;
-		 public const ushort R2C_Ping = 118;
-		 public const ushort G2C_Test = 119;
-		 public const ushort C2M_Reload = 120;
-		 public const ushort M2C_Reload = 121;
+		 public const ushort A0008_GetUserInfo_C2G = 101;
+		 public const ushort A0008_GetUserInfo_G2C = 102;
+		 public const ushort CharacterInfo = 103;
+		 public const ushort A0003_LoginGate_C2G = 104;
+		 public const ushort A0003_LoginGate_G2C = 105;
+		 public const ushort A0002_Login_C2R = 106;
+		 public const ushort A0002_Login_R2C = 107;
+		 public const ushort A0001_Register_C2R = 108;
+		 public const ushort A0001_Register_R2C = 109;
+		 public const ushort Card = 110;
+		 public const ushort G2C_GetUserInfo_Back = 111;
+		 public const ushort C2G_GetUserInfo_Req = 112;
+		 public const ushort Actor_Test = 113;
+		 public const ushort C2M_TestRequest = 114;
+		 public const ushort M2C_TestResponse = 115;
+		 public const ushort Actor_TransferRequest = 116;
+		 public const ushort Actor_TransferResponse = 117;
+		 public const ushort C2G_EnterMap = 118;
+		 public const ushort G2C_EnterMap = 119;
+		 public const ushort UnitInfo = 120;
+		 public const ushort M2C_CreateUnits = 121;
+		 public const ushort Frame_ClickMap = 122;
+		 public const ushort M2C_PathfindingResult = 123;
+		 public const ushort C2R_Ping = 124;
+		 public const ushort R2C_Ping = 125;
+		 public const ushort G2C_Test = 126;
+		 public const ushort C2M_Reload = 127;
+		 public const ushort M2C_Reload = 128;
 	}
 }

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="800,600">
+<component size="800,600" adaptationTest="FitSize">
   <displayList>
-    <image id="n0_d450" name="n0" src="d4503" fileName="Folder1/2.png" xy="-272,2"/>
-    <image id="n1_d450" name="n1" src="d4504" fileName="Folder1/3.png" xy="798,480"/>
+    <image id="n0_d450" name="n0" src="d4503" fileName="Effect/Resource/2.png" xy="-272,2"/>
+    <image id="n1_d450" name="n1" src="d4504" fileName="Effect/Resource/3.png" xy="798,480"/>
   </displayList>
   <transition name="t0">
     <item time="0" type="XY" target="n0_d450" tween="true" startValue="-272,2" endValue="532,4" duration="6"/>
     <item time="0" type="XY" target="n1_d450" tween="true" startValue="798,480" endValue="6,478" duration="6"/>
     <item time="24" type="XY" target="n0_d450" value="532,4"/>
     <item time="24" type="XY" target="n1_d450" value="6,478"/>
-    <item time="30" type="XY" target="n0_d450" value="802,4"/>
     <item time="30" type="XY" target="n1_d450" value="-400,472"/>
+    <item time="30" type="XY" target="n0_d450" value="802,4"/>
   </transition>
 </component>

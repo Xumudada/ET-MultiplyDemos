@@ -1,6 +1,116 @@
 syntax = "proto3";
 package ETModel;
 
+//玩家请求自己的个人信息 不需要参数
+message A0008_GetUserInfo_C2G // IRequest
+{
+	int32 RpcId = 90;
+}
+
+//获得用户名和用户等级
+message A0008_GetUserInfo_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	repeated CharacterInfo Characters = 1;
+}
+
+//单个角色的简要描述
+message CharacterInfo
+{
+	string Name = 1; // 角色名
+	int32 Level = 2; // 角色等级
+	CareerType Career = 3; // 职业编号
+	PetType Pet = 4; // 宠物编号
+	ModelType Model = 5; // 模型编号
+	WeaponType Weapon = 6; //武器编号
+	RegionType Region = 7; // 区域编号
+	float X = 8; // 坐标
+	float Y = 9;
+	float Z = 10;
+}
+
+//职业编号
+enum CareerType
+{
+	NoneCareer = 0;
+	Warror = 1; // 战士
+    Paladin = 2; // 骑士
+	Hunter = 3; // 猎人
+	Shaman = 4; //萨满
+	Rogue = 5; // 盗贼
+	Warlock = 6; // 术士
+	Mage = 7; // 法师
+	Priest = 8; // 牧师
+	Druid = 9; // 德鲁伊
+}
+
+//宠物编号
+enum PetType
+{
+	NonePet = 0;
+	Cat = 1; // 猫
+    Dog = 2; // 狗
+}
+
+//模型编号
+enum ModelType
+{
+	NoneModel = 0;
+	Man = 1; // 男性
+    Women = 2; // 女性
+}
+
+//武器编号
+enum WeaponType
+{
+	NoneWeapon = 0;
+	Sword = 1; // 剑
+    Wand = 2; // 法杖
+}
+
+//区域类型
+enum RegionType
+{
+	NoneRegion = 0;
+	Village = 1;     //村
+    City = 2;   //城镇
+	Forest = 3;   //森林
+	Mine = 4;   //矿山
+}
+
+message A0003_LoginGate_C2G // IRequest
+{
+	int32 RpcId = 90;
+	int64 GateLoginKey = 1;
+}
+
+message A0003_LoginGate_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	int64 UserID = 1;
+}
+
+//客户端登陆请求
+message A0002_Login_C2R // IRequest
+{
+	int32 RpcId = 90;
+	string Account = 1; //假定的账号
+	string Password = 2; //假定的密码
+}
+
+message A0002_Login_R2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string GateAddress = 1;
+	int64 GateLoginKey = 2;
+}
+
 //客户端注册请求
 message A0001_Register_C2R // IRequest
 {

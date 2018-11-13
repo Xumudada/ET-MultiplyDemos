@@ -1,0 +1,7 @@
+{ "_t" : "StartConfig", "_id" : NumberLong("1"), "C" : [{ "_t" : "InnerConfig", "Address" : "127.0.0.1:20001" }, { "_t" : "DBConfig", "ConnectionString" : "mongodb://127.0.0.1:27017", "DBName" : "Landlords" }], "AppId" : 1, "AppType" : "DB", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("2"), "C" : [{ "_t" : "OuterConfig", "Address" : "127.0.0.1:10002", "Address2" : "127.0.0.1:10002" }, { "_t" : "InnerConfig", "Address" : "127.0.0.1:20002" }], "AppId" : 2, "AppType" : "Realm", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("3"), "C" : [{ "_t" : "InnerConfig", "Address" : "127.0.0.1:20003" }], "AppId" : 3, "AppType" : "Location", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("4"), "C" : [{ "_t" : "OuterConfig", "Address" : "127.0.0.1:10004", "Address2" : "127.0.0.1:10004" }, { "_t" : "InnerConfig", "Address" : "127.0.0.1:20004" }], "AppId" : 4, "AppType" : "Gate", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("5"), "C" : [{ "_t" : "OuterConfig", "Address" : "127.0.0.1:10005", "Address2" : "127.0.0.1:10005" }, { "_t" : "InnerConfig", "Address" : "127.0.0.1:20005" }], "AppId" : 5, "AppType" : "Gate", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("6"), "C" : [{ "_t" : "InnerConfig", "Address" : "127.0.0.1:20006" }], "AppId" : 6, "AppType" : "Map", "ServerIP" : "*" }
+{ "_t" : "StartConfig", "_id" : NumberLong("7"), "C" : [{ "_t" : "InnerConfig", "Address" : "127.0.0.1:20007" }], "AppId" : 7, "AppType" : "Map", "ServerIP" : "*" }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" adaptationTest="FitSize">
+  <displayList>
+    <component id="n0_ax3f" name="n0" src="ax3fn" fileName="02_CreateCharacter/Component1.xml" xy="0,0" size="1280,720" controller="c1,0"/>
+  </displayList>
+</component>

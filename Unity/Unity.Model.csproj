@@ -584,8 +584,12 @@
     <Compile Include="Assets\Model\Sekia\SekiaHelper.cs" />
     <Compile Include="Assets\Model\Sekia\SekiaHotfix.cs" />
     <Compile Include="Assets\Model\Sekia\SekiaType.cs" />
-    <Compile Include="Assets\Model\Sekia\UI\SekiaLogin\SekiaLoginComponent.cs" />
-    <Compile Include="Assets\Model\Sekia\UI\SekiaLogin\SekiaLoginFactory.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\01_SekiaLogin\SekiaLoginComponent.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\01_SekiaLogin\SekiaLoginFactory.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\02_CreateCharacter\CreateCharacterComponent.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\02_CreateCharacter\CreateCharacterFactory.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\03_SelectCharacter\SelectCharacterComponent.cs" />
+    <Compile Include="Assets\Model\Sekia\UI\03_SelectCharacter\SelectCharacterFactory.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Component\UILoadingComponent.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Event\LoadingBeginEvent_CreateLoadingUI.cs" />
     <Compile Include="Assets\Model\UI\UILoading\Event\LoadingFinishEvent_RemoveLoadingUI.cs" />

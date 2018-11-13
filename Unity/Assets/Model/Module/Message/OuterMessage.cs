@@ -8,7 +8,909 @@ using pbc = global::Google.Protobuf.Collections;
 using scg = global::System.Collections.Generic;
 namespace ETModel {
 
+  #region Enums
+  /// <summary>
+  ///职业编号
+  /// </summary>
+  public enum CareerType {
+    NoneCareer = 0,
+    /// <summary>
+    /// 战士
+    /// </summary>
+    Warror = 1,
+    /// <summary>
+    /// 骑士
+    /// </summary>
+    Paladin = 2,
+    /// <summary>
+    /// 猎人
+    /// </summary>
+    Hunter = 3,
+    /// <summary>
+    ///萨满
+    /// </summary>
+    Shaman = 4,
+    /// <summary>
+    /// 盗贼
+    /// </summary>
+    Rogue = 5,
+    /// <summary>
+    /// 术士
+    /// </summary>
+    Warlock = 6,
+    /// <summary>
+    /// 法师
+    /// </summary>
+    Mage = 7,
+    /// <summary>
+    /// 牧师
+    /// </summary>
+    Priest = 8,
+    /// <summary>
+    /// 德鲁伊
+    /// </summary>
+    Druid = 9,
+  }
+
+  /// <summary>
+  ///宠物编号
+  /// </summary>
+  public enum PetType {
+    NonePet = 0,
+    /// <summary>
+    /// 猫
+    /// </summary>
+    Cat = 1,
+    /// <summary>
+    /// 狗
+    /// </summary>
+    Dog = 2,
+  }
+
+  /// <summary>
+  ///模型编号
+  /// </summary>
+  public enum ModelType {
+    NoneModel = 0,
+    /// <summary>
+    /// 男性
+    /// </summary>
+    Man = 1,
+    /// <summary>
+    /// 女性
+    /// </summary>
+    Women = 2,
+  }
+
+  /// <summary>
+  ///武器编号
+  /// </summary>
+  public enum WeaponType {
+    NoneWeapon = 0,
+    /// <summary>
+    /// 剑
+    /// </summary>
+    Sword = 1,
+    /// <summary>
+    /// 法杖
+    /// </summary>
+    Wand = 2,
+  }
+
+  /// <summary>
+  ///区域类型
+  /// </summary>
+  public enum RegionType {
+    NoneRegion = 0,
+    /// <summary>
+    ///村
+    /// </summary>
+    Village = 1,
+    /// <summary>
+    ///城镇
+    /// </summary>
+    City = 2,
+    /// <summary>
+    ///森林
+    /// </summary>
+    Forest = 3,
+    /// <summary>
+    ///矿山
+    /// </summary>
+    Mine = 4,
+  }
+
+  #endregion
+
   #region Messages
+  /// <summary>
+  ///玩家请求自己的个人信息 不需要参数
+  /// </summary>
+  public partial class A0008_GetUserInfo_C2G : pb::IMessage {
+    private static readonly pb::MessageParser<A0008_GetUserInfo_C2G> _parser = new pb::MessageParser<A0008_GetUserInfo_C2G>(() => (A0008_GetUserInfo_C2G)MessagePool.Instance.Fetch(typeof(A0008_GetUserInfo_C2G)));
+    public static pb::MessageParser<A0008_GetUserInfo_C2G> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      rpcId_ = 0;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///获得用户名和用户等级
+  /// </summary>
+  public partial class A0008_GetUserInfo_G2C : pb::IMessage {
+    private static readonly pb::MessageParser<A0008_GetUserInfo_G2C> _parser = new pb::MessageParser<A0008_GetUserInfo_G2C>(() => (A0008_GetUserInfo_G2C)MessagePool.Instance.Fetch(typeof(A0008_GetUserInfo_G2C)));
+    public static pb::MessageParser<A0008_GetUserInfo_G2C> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private int error_;
+    public int Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private static readonly pb::FieldCodec<global::ETModel.CharacterInfo> _repeated_characters_codec
+        = pb::FieldCodec.ForMessage(10, global::ETModel.CharacterInfo.Parser);
+    private pbc::RepeatedField<global::ETModel.CharacterInfo> characters_ = new pbc::RepeatedField<global::ETModel.CharacterInfo>();
+    public pbc::RepeatedField<global::ETModel.CharacterInfo> Characters {
+      get { return characters_; }
+      set { characters_ = value; }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      characters_.WriteTo(output, _repeated_characters_codec);
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+      if (Error != 0) {
+        output.WriteRawTag(216, 5);
+        output.WriteInt32(Error);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(226, 5);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Error != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Error);
+      }
+      if (Message.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      size += characters_.CalculateSize(_repeated_characters_codec);
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      for (int i = 0; i < characters_.Count; i++) { MessagePool.Instance.Recycle(characters_[i]); }
+      characters_.Clear();
+      rpcId_ = 0;
+      error_ = 0;
+      message_ = "";
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            characters_.AddEntriesFrom(input, _repeated_characters_codec);
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+          case 728: {
+            Error = input.ReadInt32();
+            break;
+          }
+          case 738: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///单个角色的简要描述
+  /// </summary>
+  public partial class CharacterInfo : pb::IMessage {
+    private static readonly pb::MessageParser<CharacterInfo> _parser = new pb::MessageParser<CharacterInfo>(() => (CharacterInfo)MessagePool.Instance.Fetch(typeof(CharacterInfo)));
+    public static pb::MessageParser<CharacterInfo> Parser { get { return _parser; } }
+
+    private string name_ = "";
+    /// <summary>
+    /// 角色名
+    /// </summary>
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private int level_;
+    /// <summary>
+    /// 角色等级
+    /// </summary>
+    public int Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    private global::ETModel.CareerType career_ = 0;
+    /// <summary>
+    /// 职业编号
+    /// </summary>
+    public global::ETModel.CareerType Career {
+      get { return career_; }
+      set {
+        career_ = value;
+      }
+    }
+
+    private global::ETModel.PetType pet_ = 0;
+    /// <summary>
+    /// 宠物编号
+    /// </summary>
+    public global::ETModel.PetType Pet {
+      get { return pet_; }
+      set {
+        pet_ = value;
+      }
+    }
+
+    private global::ETModel.ModelType model_ = 0;
+    /// <summary>
+    /// 模型编号
+    /// </summary>
+    public global::ETModel.ModelType Model {
+      get { return model_; }
+      set {
+        model_ = value;
+      }
+    }
+
+    private global::ETModel.WeaponType weapon_ = 0;
+    /// <summary>
+    ///武器编号
+    /// </summary>
+    public global::ETModel.WeaponType Weapon {
+      get { return weapon_; }
+      set {
+        weapon_ = value;
+      }
+    }
+
+    private global::ETModel.RegionType region_ = 0;
+    /// <summary>
+    /// 区域编号
+    /// </summary>
+    public global::ETModel.RegionType Region {
+      get { return region_; }
+      set {
+        region_ = value;
+      }
+    }
+
+    private float x_;
+    /// <summary>
+    /// 坐标
+    /// </summary>
+    public float X {
+      get { return x_; }
+      set {
+        x_ = value;
+      }
+    }
+
+    private float y_;
+    public float Y {
+      get { return y_; }
+      set {
+        y_ = value;
+      }
+    }
+
+    private float z_;
+    public float Z {
+      get { return z_; }
+      set {
+        z_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Level);
+      }
+      if (Career != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Career);
+      }
+      if (Pet != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Pet);
+      }
+      if (Model != 0) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Model);
+      }
+      if (Weapon != 0) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Weapon);
+      }
+      if (Region != 0) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Region);
+      }
+      if (X != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(X);
+      }
+      if (Y != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Y);
+      }
+      if (Z != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(Z);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Level);
+      }
+      if (Career != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Career);
+      }
+      if (Pet != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pet);
+      }
+      if (Model != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Model);
+      }
+      if (Weapon != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Weapon);
+      }
+      if (Region != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Region);
+      }
+      if (X != 0F) {
+        size += 1 + 4;
+      }
+      if (Y != 0F) {
+        size += 1 + 4;
+      }
+      if (Z != 0F) {
+        size += 1 + 4;
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      name_ = "";
+      level_ = 0;
+      x_ = 0f;
+      y_ = 0f;
+      z_ = 0f;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Level = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            career_ = (global::ETModel.CareerType) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            pet_ = (global::ETModel.PetType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            model_ = (global::ETModel.ModelType) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            weapon_ = (global::ETModel.WeaponType) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            region_ = (global::ETModel.RegionType) input.ReadEnum();
+            break;
+          }
+          case 69: {
+            X = input.ReadFloat();
+            break;
+          }
+          case 77: {
+            Y = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            Z = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public partial class A0003_LoginGate_C2G : pb::IMessage {
+    private static readonly pb::MessageParser<A0003_LoginGate_C2G> _parser = new pb::MessageParser<A0003_LoginGate_C2G>(() => (A0003_LoginGate_C2G)MessagePool.Instance.Fetch(typeof(A0003_LoginGate_C2G)));
+    public static pb::MessageParser<A0003_LoginGate_C2G> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private long gateLoginKey_;
+    public long GateLoginKey {
+      get { return gateLoginKey_; }
+      set {
+        gateLoginKey_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (GateLoginKey != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(GateLoginKey);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (GateLoginKey != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GateLoginKey);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      gateLoginKey_ = 0;
+      rpcId_ = 0;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            GateLoginKey = input.ReadInt64();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public partial class A0003_LoginGate_G2C : pb::IMessage {
+    private static readonly pb::MessageParser<A0003_LoginGate_G2C> _parser = new pb::MessageParser<A0003_LoginGate_G2C>(() => (A0003_LoginGate_G2C)MessagePool.Instance.Fetch(typeof(A0003_LoginGate_G2C)));
+    public static pb::MessageParser<A0003_LoginGate_G2C> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private int error_;
+    public int Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private long userID_;
+    public long UserID {
+      get { return userID_; }
+      set {
+        userID_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UserID != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(UserID);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+      if (Error != 0) {
+        output.WriteRawTag(216, 5);
+        output.WriteInt32(Error);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(226, 5);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Error != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Error);
+      }
+      if (Message.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (UserID != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UserID);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      userID_ = 0;
+      rpcId_ = 0;
+      error_ = 0;
+      message_ = "";
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            UserID = input.ReadInt64();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+          case 728: {
+            Error = input.ReadInt32();
+            break;
+          }
+          case 738: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///客户端登陆请求
+  /// </summary>
+  public partial class A0002_Login_C2R : pb::IMessage {
+    private static readonly pb::MessageParser<A0002_Login_C2R> _parser = new pb::MessageParser<A0002_Login_C2R>(() => (A0002_Login_C2R)MessagePool.Instance.Fetch(typeof(A0002_Login_C2R)));
+    public static pb::MessageParser<A0002_Login_C2R> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private string account_ = "";
+    /// <summary>
+    ///假定的账号
+    /// </summary>
+    public string Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private string password_ = "";
+    /// <summary>
+    ///假定的密码
+    /// </summary>
+    public string Password {
+      get { return password_; }
+      set {
+        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Account.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Account);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Password);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
+      }
+      if (Password.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      account_ = "";
+      password_ = "";
+      rpcId_ = 0;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Account = input.ReadString();
+            break;
+          }
+          case 18: {
+            Password = input.ReadString();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public partial class A0002_Login_R2C : pb::IMessage {
+    private static readonly pb::MessageParser<A0002_Login_R2C> _parser = new pb::MessageParser<A0002_Login_R2C>(() => (A0002_Login_R2C)MessagePool.Instance.Fetch(typeof(A0002_Login_R2C)));
+    public static pb::MessageParser<A0002_Login_R2C> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private int error_;
+    public int Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private string gateAddress_ = "";
+    public string GateAddress {
+      get { return gateAddress_; }
+      set {
+        gateAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private long gateLoginKey_;
+    public long GateLoginKey {
+      get { return gateLoginKey_; }
+      set {
+        gateLoginKey_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (GateAddress.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GateAddress);
+      }
+      if (GateLoginKey != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(GateLoginKey);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+      if (Error != 0) {
+        output.WriteRawTag(216, 5);
+        output.WriteInt32(Error);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(226, 5);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Error != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Error);
+      }
+      if (Message.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (GateAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GateAddress);
+      }
+      if (GateLoginKey != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GateLoginKey);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      gateAddress_ = "";
+      gateLoginKey_ = 0;
+      rpcId_ = 0;
+      error_ = 0;
+      message_ = "";
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            GateAddress = input.ReadString();
+            break;
+          }
+          case 16: {
+            GateLoginKey = input.ReadInt64();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+          case 728: {
+            Error = input.ReadInt32();
+            break;
+          }
+          case 738: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   ///客户端注册请求
   /// </summary>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" adaptationTest="FitHeightAndSetCenter">
+  <controller name="c1" alias="gender" autoRadioGroupDepth="true" exported="true" pages="0,男,1,女,3," selected="1"/>
+  <controller name="c2" alias="Career" autoRadioGroupDepth="true" exported="true" pages="0,战士,1,法师,2," selected="0"/>
+  <displayList>
+    <image id="n1_ax3f" name="ZhanShi" src="ax3fr" fileName="02_CreateCharacter/Resource/pic1.jpg" xy="0,0" size="1280,720">
+      <gearDisplay controller="c2" pages="0"/>
+    </image>
+    <image id="n2_ax3f" name="FaShi" src="ax3fq" fileName="02_CreateCharacter/Resource/pic2.jpg" xy="0,0" size="1280,720">
+      <gearDisplay controller="c2" pages="1"/>
+    </image>
+    <component id="n3_ax3f" name="n3" src="ax3fy" fileName="02_CreateCharacter/Gender1.xml" xy="156,154" controller="button,0">
+      <Button controller="c1" page="0"/>
+    </component>
+    <component id="n4_ax3f" name="n4" src="ax3fz" fileName="02_CreateCharacter/Gender2.xml" xy="158,300" controller="button,1">
+      <Button checked="true" controller="c1" page="1"/>
+    </component>
+    <component id="n5_ax3f" name="n5" src="ax3f14" fileName="02_CreateCharacter/Career1.xml" xy="1042,152" controller="button,1">
+      <Button checked="true" controller="c2" page="0"/>
+    </component>
+    <component id="n6_ax3f" name="n6" src="ax3f15" fileName="02_CreateCharacter/Career2.xml" xy="1042,336" controller="button,0">
+      <Button controller="c2" page="1"/>
+    </component>
+  </displayList>
+</component>

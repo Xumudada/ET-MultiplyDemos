@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="4zv3tw5y" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="e3631" name="pic1.jpg" path="/SekiaLogin/Resource/" exported="true" scale="" scale9grid="480,270,960,540"/>
-    <component id="d4502" name="SekiaLogin.xml" path="/SekiaLogin/" exported="true"/>
+    <image id="e3631" name="pic1.jpg" path="/01_SekiaLogin/Resource/" exported="true" scale="" scale9grid="480,270,960,540"/>
+    <component id="d4502" name="SekiaLogin.xml" path="/01_SekiaLogin/" exported="true"/>
     <image id="d4503" name="2.png" path="/Effect/Resource/" exported="true"/>
     <image id="d4504" name="3.png" path="/Effect/Resource/" exported="true"/>
-    <image id="d4505" name="b4.png" path="/SekiaLogin/Resource/" exported="true"/>
-    <image id="d4506" name="b5.png" path="/SekiaLogin/Resource/" exported="true"/>
-    <sound id="d4507" name="BUZZ4.wav" path="/SekiaLogin/Resource/" exported="true"/>
+    <image id="d4505" name="b4.png" path="/01_SekiaLogin/Resource/" exported="true"/>
+    <image id="d4506" name="b5.png" path="/01_SekiaLogin/Resource/" exported="true"/>
     <component id="d4509" name="boss_effect.xml" path="/Effect/" exported="true"/>
-    <component id="d450a" name="AcountInput.xml" path="/SekiaLogin/" exported="true"/>
-    <component id="hagnc" name="Button.xml" path="/SekiaLogin/" exported="true"/>
-    <image id="hagnf" name="8.png" path="/SekiaLogin/Resource/" scale="9grid" scale9grid="31,26,62,52"/>
-    <component id="i14kj" name="PasswordInput.xml" path="/SekiaLogin/" exported="true"/>
+    <component id="d450a" name="AcountInput.xml" path="/01_SekiaLogin/" exported="true"/>
+    <component id="hagnc" name="Button.xml" path="/01_SekiaLogin/" exported="true"/>
+    <image id="hagnf" name="8.png" path="/01_SekiaLogin/Resource/" exported="true" scale="9grid" scale9grid="31,26,62,52"/>
+    <component id="i14kj" name="PasswordInput.xml" path="/01_SekiaLogin/" exported="true"/>
+    <component id="g5tuk" name="CreateCharacter.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="g5tul" name="SelectCharacter.xml" path="/03_SelectCharacter/" exported="true"/>
+    <sound id="g5tum" name="7571.mp3" path="/01_SekiaLogin/Resource/" exported="true"/>
+    <component id="ax3fn" name="Controller1.xml" path="/02_CreateCharacter/" exported="true"/>
+    <image id="ax3fq" name="pic2.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3fr" name="pic1.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3fs" name="button1.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3ft" name="button2.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3fu" name="button3.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3fv" name="button4.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <component id="ax3fy" name="Gender1.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="ax3fz" name="Gender2.xml" path="/02_CreateCharacter/" exported="true"/>
+    <image id="ax3f10" name="button5.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3f11" name="button6.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3f12" name="button7.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="ax3f13" name="button8.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <component id="ax3f14" name="Career1.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="ax3f15" name="Career2.xml" path="/02_CreateCharacter/" exported="true"/>
   </resources>
   <publish name="Sekia"/>
 </packageDescription>

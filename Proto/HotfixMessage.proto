@@ -2,6 +2,23 @@ syntax = "proto3";
 import "OuterMessage.proto";
 package ETHotfix;
 
+//已过期后续删除
+message A1001_GetUserInfo_C2G // IRequest
+{
+	int32 RpcId = 90;
+}
+
+//已过期后续删除
+message A1001_GetUserInfo_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string UserName = 1;
+	int32 UserLevel = 2;
+}
+
+
 //游戏中 客户端请求对目标施展普通攻击
 message A1013_Attack_C2M // IActorMessage
 {
@@ -115,54 +132,13 @@ message A1002_StartRobotMatch5V5_C2G // IMessage
 	int32 RpcId = 90;
 }
 
-//玩家请求自己的个人信息 不需要参数
-message A1001_GetUserInfo_C2G // IRequest
-{
-	int32 RpcId = 90;
-}
-
-//获得用户名和用户等级
-message A1001_GetUserInfo_G2C // IResponse
-{
-	int32 RpcId = 90;
-	int32 Error = 91;
-	string Message = 92;
-	string UserName = 1;
-	int32 UserLevel = 2;
-}
 
 
 
-//客户端登陆请求
-message A0002_Login_C2R // IRequest
-{
-	int32 RpcId = 90;
-	string Account = 1; //假定的账号
-	string Password = 2; //假定的密码
-}
 
-message A0002_Login_R2C // IResponse
-{
-	int32 RpcId = 90;
-	int32 Error = 91;
-	string Message = 92;
-	string GateAddress = 1;
-	int64 GateLoginKey = 2;
-}
 
-message A0003_LoginGate_C2G // IRequest
-{
-	int32 RpcId = 90;
-	int64 GateLoginKey = 1;
-}
 
-message A0003_LoginGate_G2C // IResponse
-{
-	int32 RpcId = 90;
-	int32 Error = 91;
-	string Message = 92;
-	int64 UserID = 1;
-}
+
 
 //Test 测试类消息
 message T0001_Ping // IMessage

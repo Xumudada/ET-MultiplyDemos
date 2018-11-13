@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
+using System.Collections.Generic;
 
 namespace ETModel
 {
@@ -25,11 +26,20 @@ namespace ETModel
         //余额
         public long Money { get; set; }
 
+        //最多可创建3个角色
+        public long CharacterID1 { get; set; }
+        public long CharacterID2 { get; set; }
+        public long CharacterID3 { get; set; }
+
+        //public List<Ca>
         public void Awake(string name)
         {
             UserName = name;
             UserLevel = 1;
             Money = 10000;
+            CharacterID1 = 0;
+            CharacterID2 = 0;
+            CharacterID3 = 0;
         }
 
     }
