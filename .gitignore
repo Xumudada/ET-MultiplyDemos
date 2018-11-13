@@ -16,6 +16,7 @@ Opt/
 
 **/.vs
 */.svn/
+FairyGUI/.objs/
 .svn/
 bin/
 Bin/
