@@ -15,7 +15,7 @@
     <component id="g5tuk" name="CreateCharacter.xml" path="/02_CreateCharacter/" exported="true"/>
     <component id="g5tul" name="SelectCharacter.xml" path="/03_SelectCharacter/" exported="true"/>
     <sound id="g5tum" name="7571.mp3" path="/01_SekiaLogin/Resource/" exported="true"/>
-    <component id="ax3fn" name="Controller1.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="ax3fn" name="Controller.xml" path="/02_CreateCharacter/" exported="true"/>
     <image id="ax3fq" name="pic2.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
     <image id="ax3fr" name="pic1.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
     <image id="ax3fs" name="button1.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
@@ -30,6 +30,15 @@
     <image id="ax3f13" name="button8.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
     <component id="ax3f14" name="Career1.xml" path="/02_CreateCharacter/" exported="true"/>
     <component id="ax3f15" name="Career2.xml" path="/02_CreateCharacter/" exported="true"/>
+    <image id="m5lz16" name="button9.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="m5lz17" name="button10.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <image id="m5lz18" name="button11.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <component id="m5lz19" name="Next.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="m5lz1a" name="Complete.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="m5lz1b" name="Back.xml" path="/02_CreateCharacter/" exported="true"/>
+    <image id="m5lz1c" name="button12.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
+    <component id="m5lz1d" name="Last.xml" path="/02_CreateCharacter/" exported="true"/>
+    <component id="m5lz1e" name="NameInput.xml" path="/02_CreateCharacter/" exported="true"/>
   </resources>
   <publish name="Sekia"/>
 </packageDescription>

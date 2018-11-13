@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" adaptationTest="FitHeightAndSetCenter">
+  <controller name="c1" alias="gender" autoRadioGroupDepth="true" exported="true" pages="0,男,1,女" selected="0"/>
+  <controller name="c2" alias="Career" autoRadioGroupDepth="true" exported="true" pages="0,战士,1,法师" selected="0"/>
+  <controller name="c3" alias="Step" exported="true" pages="0,职业,1,取名" selected="1"/>
+  <displayList>
+    <image id="n1_ax3f" name="ZhanShi" src="ax3fr" fileName="02_CreateCharacter/Resource/pic1.jpg" xy="0,0" size="1280,720">
+      <gearDisplay controller="c2" pages="0"/>
+    </image>
+    <image id="n2_ax3f" name="FaShi" src="ax3fq" fileName="02_CreateCharacter/Resource/pic2.jpg" xy="0,0" size="1280,720">
+      <gearDisplay controller="c2" pages="1"/>
+    </image>
+    <component id="n3_ax3f" name="n3" src="ax3fy" fileName="02_CreateCharacter/Gender1.xml" xy="156,154" controller="button,1">
+      <gearDisplay controller="c3" pages="0"/>
+      <Button checked="true" controller="c1" page="0"/>
+    </component>
+    <component id="n4_ax3f" name="n4" src="ax3fz" fileName="02_CreateCharacter/Gender2.xml" xy="158,300" controller="button,0">
+      <gearDisplay controller="c3" pages="0"/>
+      <Button controller="c1" page="1"/>
+    </component>
+    <component id="n5_ax3f" name="n5" src="ax3f14" fileName="02_CreateCharacter/Career1.xml" xy="1042,152" controller="button,1">
+      <gearDisplay controller="c3" pages="0"/>
+      <Button checked="true" controller="c2" page="0"/>
+    </component>
+    <component id="n6_ax3f" name="n6" src="ax3f15" fileName="02_CreateCharacter/Career2.xml" xy="1042,294" controller="button,0">
+      <gearDisplay controller="c3" pages="0"/>
+      <Button controller="c2" page="1"/>
+    </component>
+    <component id="n7_m5lz" name="n7" src="m5lz19" fileName="02_CreateCharacter/Next.xml" xy="732,570">
+      <gearDisplay controller="c3" pages="0"/>
+      <Button controller="c3" page="1"/>
+    </component>
+    <component id="n8_m5lz" name="n8" src="m5lz1b" fileName="02_CreateCharacter/Back.xml" xy="354,570">
+      <gearDisplay controller="c3" pages="0"/>
+    </component>
+    <component id="n9_m5lz" name="n9" src="m5lz1d" fileName="02_CreateCharacter/Last.xml" xy="352,570">
+      <gearDisplay controller="c3" pages="1"/>
+      <Button controller="c3" page="0"/>
+    </component>
+    <component id="n10_m5lz" name="n10" src="m5lz1a" fileName="02_CreateCharacter/Complete.xml" xy="732,570">
+      <gearDisplay controller="c3" pages="1"/>
+    </component>
+    <component id="n12_m5lz" name="n12" src="m5lz1e" fileName="02_CreateCharacter/NameInput.xml" xy="488,478">
+      <gearDisplay controller="c3" pages="1"/>
+    </component>
+  </displayList>
+</component>

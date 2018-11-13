@@ -21,8 +21,8 @@ namespace ETModel
         public override void Run()
         {
             Game.Scene.GetComponent<FUIComponent>().Remove(FUIType.SekiaLogin);
-            //移除包
-            Game.Scene.GetComponent<FUIPackageComponent>().RemovePackage(FUIType.Sekia);
+            //移除包后该包下的所有原件将找不到纹理
+            //Game.Scene.GetComponent<FUIPackageComponent>().RemovePackage(FUIType.Sekia);
         }
     }
 }
