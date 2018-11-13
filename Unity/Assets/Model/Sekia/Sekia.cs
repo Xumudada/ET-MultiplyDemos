@@ -46,7 +46,8 @@ namespace ETModel
                 Game.Scene.AddComponent<MessageDispatcherComponent>();
 
                 Game.Hotfix.GotoHotfix();
-                
+
+                Game.EventSystem.Run(EventIdType.SekiaInitSceneStart);
                 //Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
             }
             catch (Exception e)

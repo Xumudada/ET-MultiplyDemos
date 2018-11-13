@@ -1,6 +1,22 @@
 syntax = "proto3";
 package ETModel;
 
+//客户端注册请求
+message A0001_Register_C2R // IRequest
+{
+	int32 RpcId = 90;
+	string Account = 1; //假定的账号
+	string Password = 2; //假定的密码
+}
+
+//客户端注册请求回复
+message A0001_Register_R2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
 //----斗地主
 message Card
 {

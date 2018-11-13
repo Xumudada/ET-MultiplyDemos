@@ -1,6 +1,4 @@
-﻿using ETModel;
-
-namespace ETHotfix
+﻿namespace ETModel
 {
     [ObjectSystem]
     public class SekiaLoginComponentAwakeSystem : AwakeSystem<SekiaLoginComponent>

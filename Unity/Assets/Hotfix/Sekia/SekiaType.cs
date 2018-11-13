@@ -12,10 +12,4 @@ namespace ETHotfix
         public const string LandlordsEnd = "LandlordsEnd";
         public const string LandlordsInteraction = "LandlordsInteraction";
     }
-
-    public static partial class FUIType
-    {
-        public const string Sekia = "Sekia";
-        public const string SekiaLogin = "SekiaLogin";
-    }
 }

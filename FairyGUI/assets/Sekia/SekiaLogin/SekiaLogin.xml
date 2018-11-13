@@ -18,7 +18,7 @@
       <relation target="n2_d450" sidePair="center-center,middle-middle"/>
       <Button title="注册" titleColor="#000000" titleFontSize="30"/>
     </component>
-    <text id="n16_h2nn" name="Prompt" xy="640,130" pivot="0.5,0.5" anchor="true" size="300,50" input="true" fontSize="30" color="#ff0000" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
+    <text id="n16_h2nn" name="Prompt" xy="640,130" pivot="0.5,0.5" anchor="true" size="300,50" fontSize="30" color="#ff0000" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
       <relation target="n2_d450" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

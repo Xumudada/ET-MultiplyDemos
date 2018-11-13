@@ -1,9 +1,8 @@
-﻿using ETModel;
-using System;
+﻿using System;
 using UnityEngine;
 using FairyGUI;
 
-namespace ETHotfix
+namespace ETModel
 {
     public static class SekiaLoginFactory
     {

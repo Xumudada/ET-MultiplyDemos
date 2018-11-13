@@ -26,7 +26,7 @@ namespace ETHotfix
                 Game.Scene.AddComponent<ConfigComponent>();
                 ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
                 
-                Game.EventSystem.Run(EventIdType.SekiaInitSceneStart);
+                //Game.EventSystem.Run(EventIdType.SekiaInitSceneStart);
             }
             catch (Exception e)
             {

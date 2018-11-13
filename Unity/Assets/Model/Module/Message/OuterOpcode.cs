@@ -1,6 +1,14 @@
 using ETModel;
 namespace ETModel
 {
+//客户端注册请求
+	[Message(OuterOpcode.A0001_Register_C2R)]
+	public partial class A0001_Register_C2R : IRequest {}
+
+//客户端注册请求回复
+	[Message(OuterOpcode.A0001_Register_R2C)]
+	public partial class A0001_Register_R2C : IResponse {}
+
 //----斗地主
 	[Message(OuterOpcode.Card)]
 	public partial class Card {}
@@ -67,24 +75,26 @@ namespace ETModel
 {
 	public static partial class OuterOpcode
 	{
-		 public const ushort Card = 101;
-		 public const ushort G2C_GetUserInfo_Back = 102;
-		 public const ushort C2G_GetUserInfo_Req = 103;
-		 public const ushort Actor_Test = 104;
-		 public const ushort C2M_TestRequest = 105;
-		 public const ushort M2C_TestResponse = 106;
-		 public const ushort Actor_TransferRequest = 107;
-		 public const ushort Actor_TransferResponse = 108;
-		 public const ushort C2G_EnterMap = 109;
-		 public const ushort G2C_EnterMap = 110;
-		 public const ushort UnitInfo = 111;
-		 public const ushort M2C_CreateUnits = 112;
-		 public const ushort Frame_ClickMap = 113;
-		 public const ushort M2C_PathfindingResult = 114;
-		 public const ushort C2R_Ping = 115;
-		 public const ushort R2C_Ping = 116;
-		 public const ushort G2C_Test = 117;
-		 public const ushort C2M_Reload = 118;
-		 public const ushort M2C_Reload = 119;
+		 public const ushort A0001_Register_C2R = 101;
+		 public const ushort A0001_Register_R2C = 102;
+		 public const ushort Card = 103;
+		 public const ushort G2C_GetUserInfo_Back = 104;
+		 public const ushort C2G_GetUserInfo_Req = 105;
+		 public const ushort Actor_Test = 106;
+		 public const ushort C2M_TestRequest = 107;
+		 public const ushort M2C_TestResponse = 108;
+		 public const ushort Actor_TransferRequest = 109;
+		 public const ushort Actor_TransferResponse = 110;
+		 public const ushort C2G_EnterMap = 111;
+		 public const ushort G2C_EnterMap = 112;
+		 public const ushort UnitInfo = 113;
+		 public const ushort M2C_CreateUnits = 114;
+		 public const ushort Frame_ClickMap = 115;
+		 public const ushort M2C_PathfindingResult = 116;
+		 public const ushort C2R_Ping = 117;
+		 public const ushort R2C_Ping = 118;
+		 public const ushort G2C_Test = 119;
+		 public const ushort C2M_Reload = 120;
+		 public const ushort M2C_Reload = 121;
 	}
 }

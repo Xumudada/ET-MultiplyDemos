@@ -1,18 +1,15 @@
 {
-	"expanded_nodes": [],
+	"docs": [
+		"4zv3tw5y",
+		"d4502"
+	],
+	"expanded_nodes": [
+		"4zv3tw5y",
+		"/"
+	],
 	"active_doc": [
 		"4zv3tw5y",
 		"d4502"
 	],
-	"hidden_packages": [],
-	"docs": [
-		"4zv3tw5y",
-		"d4502",
-		"4zv3tw5y",
-		"hagnc",
-		"4zv3tw5y",
-		"d450a",
-		"4zv3tw5y",
-		"i14kj"
-	]
+	"hidden_packages": []
 }
