@@ -11,5 +11,5 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
   </displayList>
-  <Button downEffect="scale" downEffectValue="0.80"/>
+  <Button sound="ui://4zv3tw5yg5tum" downEffect="scale" downEffectValue="0.80"/>
 </component>

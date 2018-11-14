@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720" adaptationTest="FitSize">
   <displayList>
-    <component id="n0_ax3f" name="n0" src="ax3fn" fileName="02_CreateCharacter/Controller.xml" xy="0,0" size="1280,720" controller="c1,0,c2,0,c3,0">
+    <component id="n0_ax3f" name="Controller" src="ax3fn" fileName="02_CreateCharacter/Controller.xml" xy="0,0" size="1280,720" controller="c1,0,c2,0,c3,0">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <graph id="n1_il67" name="Holder" xy="475,86" size="338,401" type="rect"/>
   </displayList>
 </component>

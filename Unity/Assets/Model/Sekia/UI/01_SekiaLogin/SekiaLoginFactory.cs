@@ -8,6 +8,7 @@ namespace ETModel
         {
             await Game.Scene.GetComponent<FUIPackageComponent>().AddPackageAsync(FUIType.Sekia);
             FUI fui = ComponentFactory.Create<FUI, GObject>(UIPackage.CreateObject(FUIType.Sekia, FUIType.SekiaLogin));
+            //fui.GObject.Center();
             fui.Name = FUIType.SekiaLogin;
             fui.AddComponent<SekiaLoginComponent>();
 

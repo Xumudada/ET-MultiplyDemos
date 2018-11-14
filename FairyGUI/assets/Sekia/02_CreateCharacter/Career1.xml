@@ -11,5 +11,5 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Radio" sound="ui://4zv3tw5yg5tum"/>
 </component>

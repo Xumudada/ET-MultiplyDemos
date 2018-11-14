@@ -45,13 +45,20 @@ namespace App
 				
 				switch (startConfig.AppType)
 				{
-					case AppType.Manager:
+                    case AppType.DB:
+                        Game.Scene.AddComponent<NetInnerComponent, string>(innerConfig.Address);
+                        Game.Scene.AddComponent<DBComponent>();
+                        //Game.Scene.AddComponent<DBCacheComponent>();
+                        break;
+                    case AppType.Manager:
 						Game.Scene.AddComponent<AppManagerComponent>();
 						Game.Scene.AddComponent<NetInnerComponent, string>(innerConfig.Address);
 						Game.Scene.AddComponent<NetOuterComponent, string>(outerConfig.Address);
 						break;
 					case AppType.Realm:
-						Game.Scene.AddComponent<MailboxDispatcherComponent>();
+
+                        Game.Scene.AddComponent<DBProxyComponent>();
+                        Game.Scene.AddComponent<MailboxDispatcherComponent>();
 						Game.Scene.AddComponent<ActorMessageDispatcherComponent>();
 						Game.Scene.AddComponent<NetInnerComponent, string>(innerConfig.Address);
 						Game.Scene.AddComponent<NetOuterComponent, string>(outerConfig.Address);

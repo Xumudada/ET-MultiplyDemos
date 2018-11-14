@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11422334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11422832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11436242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,7 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11438356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,7 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11467876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,7 +202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11473986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11482612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11485298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,7 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11486340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,7 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!206 &20613898
 BlendTree:
   m_ObjectHideFlags: 1
@@ -1679,7 +1669,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Skill3
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 110212734}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -2914,7 +2904,7 @@ AnimatorStateMachine:
     m_Position: {x: 948, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110247648}
-    m_Position: {x: 948, y: 216, z: 0}
+    m_Position: {x: 924, y: 216, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110224250}
     m_Position: {x: 660, y: 552, z: 0}
