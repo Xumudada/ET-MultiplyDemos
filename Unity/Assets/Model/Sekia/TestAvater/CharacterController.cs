@@ -50,7 +50,7 @@ public class UCharacterController
     {
 
 		//Creates the skeleton object
-		Object res = Resources.Load ("Prefab/" + skeleton);
+		Object res = Resources.Load ("Sekia/Prefab/" + skeleton);
 		this.Instance = GameObject.Instantiate (res) as GameObject;
 		this.index = index;
 		this.skeleton = skeleton;
@@ -70,7 +70,7 @@ public class UCharacterController
 		GameObject[] objects = new GameObject[4];
 		for (int i = 0; i < equipments.Length; i++) 
         {
-			res = Resources.Load ("Prefab/" + equipments [i]);
+			res = Resources.Load ("Sekia/Prefab/" + equipments [i]);
 			objects[i] = GameObject.Instantiate (res) as GameObject;
 			meshes[i] = objects[i].GetComponentInChildren<SkinnedMeshRenderer> ();
 		}
@@ -85,7 +85,7 @@ public class UCharacterController
 		}
 		
 		// Create weapon
-		res = Resources.Load ("Prefab/" + weapon);
+		res = Resources.Load ("Sekia/Prefab/" + weapon);
 		WeaponInstance = GameObject.Instantiate (res) as GameObject;
 		
 		Transform[] transforms = Instance.GetComponentsInChildren<Transform>();
@@ -130,7 +130,7 @@ public class UCharacterController
 	
 	public void ChangeWeapon (string weapon)
 	{
-		Object res = Resources.Load ("Prefab/" + weapon);
+		Object res = Resources.Load ("Sekia/Prefab/" + weapon);
 		GameObject oldWeapon = WeaponInstance;
 		WeaponInstance = GameObject.Instantiate (res) as GameObject;
 		WeaponInstance.transform.parent = oldWeapon.transform.parent;
@@ -172,7 +172,7 @@ public class UCharacterController
 		for (int i = 0; i < equipments.Length; i++) 
         {
 			
-			res = Resources.Load ("Prefab/" + equipments [i]);
+			res = Resources.Load ("Sekia/Prefab/" + equipments [i]);
 			objects[i] = GameObject.Instantiate (res) as GameObject;
 			meshes[i] = objects[i].GetComponentInChildren<SkinnedMeshRenderer> ();
 		}

@@ -584,6 +584,10 @@
     <Compile Include="Assets\Model\Sekia\SekiaHelper.cs" />
     <Compile Include="Assets\Model\Sekia\SekiaHotfix.cs" />
     <Compile Include="Assets\Model\Sekia\SekiaType.cs" />
+    <Compile Include="Assets\Model\Sekia\TestAvater\CharacterController.cs" />
+    <Compile Include="Assets\Model\Sekia\TestAvater\CharacterMgr.cs" />
+    <Compile Include="Assets\Model\Sekia\TestAvater\CombineSkinnedMgr.cs" />
+    <Compile Include="Assets\Model\Sekia\TestAvater\Main.cs" />
     <Compile Include="Assets\Model\Sekia\UI\01_SekiaLogin\SekiaLoginComponent.cs" />
     <Compile Include="Assets\Model\Sekia\UI\01_SekiaLogin\SekiaLoginFactory.cs" />
     <Compile Include="Assets\Model\Sekia\UI\02_CreateCharacter\CreateCharacterComponent.cs" />

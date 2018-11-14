@@ -60,10 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bundles\Sekia\Avater\Script\CharacterController.cs" />
-    <Compile Include="Assets\Bundles\Sekia\Avater\Script\CharacterMgr.cs" />
-    <Compile Include="Assets\Bundles\Sekia\Avater\Script\CombineSkinnedMgr.cs" />
-    <Compile Include="Assets\Bundles\Sekia\Avater\Script\Main.cs" />
+    <Compile Include="Assets\Bundles\Sekia\Avater\AvaterScript\CharacterController.cs" />
+    <Compile Include="Assets\Bundles\Sekia\Avater\AvaterScript\CharacterMgr.cs" />
+    <Compile Include="Assets\Bundles\Sekia\Avater\AvaterScript\CombineSkinnedMgr.cs" />
+    <Compile Include="Assets\Bundles\Sekia\Avater\AvaterScript\Main.cs" />
     <None Include="Assets\Bundles\Sekia\builtin_shaders-5.3.4f1\DefaultResourcesExtra\AlphaTest-VertexLit.shader" />
     <None Include="Assets\Bundles\Sekia\Moba5V5\Shader\fx\particeszAlways.shader" />
     <None Include="Assets\Bundles\Sekia\builtin_shaders-5.3.4f1\DefaultResourcesExtra\Unlit\Unlit-Normal.shader" />
