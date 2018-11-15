@@ -1,6 +1,13 @@
 using ETModel;
 namespace ETModel
 {
+//客户端请求在当前账号下创建新的角色
+	[Message(OuterOpcode.A0009_CreateNewCharacter_C2G)]
+	public partial class A0009_CreateNewCharacter_C2G : IRequest {}
+
+	[Message(OuterOpcode.A0009_CreateNewCharacter_G2C)]
+	public partial class A0009_CreateNewCharacter_G2C : IResponse {}
+
 //玩家请求自己的个人信息 不需要参数
 	[Message(OuterOpcode.A0008_GetUserInfo_C2G)]
 	public partial class A0008_GetUserInfo_C2G : IRequest {}
@@ -105,33 +112,35 @@ namespace ETModel
 {
 	public static partial class OuterOpcode
 	{
-		 public const ushort A0008_GetUserInfo_C2G = 101;
-		 public const ushort A0008_GetUserInfo_G2C = 102;
-		 public const ushort CharacterInfo = 103;
-		 public const ushort A0003_LoginGate_C2G = 104;
-		 public const ushort A0003_LoginGate_G2C = 105;
-		 public const ushort A0002_Login_C2R = 106;
-		 public const ushort A0002_Login_R2C = 107;
-		 public const ushort A0001_Register_C2R = 108;
-		 public const ushort A0001_Register_R2C = 109;
-		 public const ushort Card = 110;
-		 public const ushort G2C_GetUserInfo_Back = 111;
-		 public const ushort C2G_GetUserInfo_Req = 112;
-		 public const ushort Actor_Test = 113;
-		 public const ushort C2M_TestRequest = 114;
-		 public const ushort M2C_TestResponse = 115;
-		 public const ushort Actor_TransferRequest = 116;
-		 public const ushort Actor_TransferResponse = 117;
-		 public const ushort C2G_EnterMap = 118;
-		 public const ushort G2C_EnterMap = 119;
-		 public const ushort UnitInfo = 120;
-		 public const ushort M2C_CreateUnits = 121;
-		 public const ushort Frame_ClickMap = 122;
-		 public const ushort M2C_PathfindingResult = 123;
-		 public const ushort C2R_Ping = 124;
-		 public const ushort R2C_Ping = 125;
-		 public const ushort G2C_Test = 126;
-		 public const ushort C2M_Reload = 127;
-		 public const ushort M2C_Reload = 128;
+		 public const ushort A0009_CreateNewCharacter_C2G = 101;
+		 public const ushort A0009_CreateNewCharacter_G2C = 102;
+		 public const ushort A0008_GetUserInfo_C2G = 103;
+		 public const ushort A0008_GetUserInfo_G2C = 104;
+		 public const ushort CharacterInfo = 105;
+		 public const ushort A0003_LoginGate_C2G = 106;
+		 public const ushort A0003_LoginGate_G2C = 107;
+		 public const ushort A0002_Login_C2R = 108;
+		 public const ushort A0002_Login_R2C = 109;
+		 public const ushort A0001_Register_C2R = 110;
+		 public const ushort A0001_Register_R2C = 111;
+		 public const ushort Card = 112;
+		 public const ushort G2C_GetUserInfo_Back = 113;
+		 public const ushort C2G_GetUserInfo_Req = 114;
+		 public const ushort Actor_Test = 115;
+		 public const ushort C2M_TestRequest = 116;
+		 public const ushort M2C_TestResponse = 117;
+		 public const ushort Actor_TransferRequest = 118;
+		 public const ushort Actor_TransferResponse = 119;
+		 public const ushort C2G_EnterMap = 120;
+		 public const ushort G2C_EnterMap = 121;
+		 public const ushort UnitInfo = 122;
+		 public const ushort M2C_CreateUnits = 123;
+		 public const ushort Frame_ClickMap = 124;
+		 public const ushort M2C_PathfindingResult = 125;
+		 public const ushort C2R_Ping = 126;
+		 public const ushort R2C_Ping = 127;
+		 public const ushort G2C_Test = 128;
+		 public const ushort C2M_Reload = 129;
+		 public const ushort M2C_Reload = 130;
 	}
 }

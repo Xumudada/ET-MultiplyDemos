@@ -4,15 +4,14 @@ namespace ETModel
 {
     public static class SekiaLoginFactory
     {
-        public static async ETTask<FUI> Create()
+        public static void Create()
         {
-            await Game.Scene.GetComponent<FUIPackageComponent>().AddPackageAsync(FUIType.Sekia);
+            FUIComponent fuiComponent = Game.Scene.GetComponent<FUIComponent>();
             FUI fui = ComponentFactory.Create<FUI, GObject>(UIPackage.CreateObject(FUIType.Sekia, FUIType.SekiaLogin));
             //fui.GObject.Center();
             fui.Name = FUIType.SekiaLogin;
             fui.AddComponent<SekiaLoginComponent>();
-
-            return fui;
+            fuiComponent.Add(fui);
         }
     }
 

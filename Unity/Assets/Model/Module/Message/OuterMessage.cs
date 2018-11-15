@@ -124,6 +124,206 @@ namespace ETModel {
 
   #region Messages
   /// <summary>
+  ///客户端请求在当前账号下创建新的角色
+  /// </summary>
+  public partial class A0009_CreateNewCharacter_C2G : pb::IMessage {
+    private static readonly pb::MessageParser<A0009_CreateNewCharacter_C2G> _parser = new pb::MessageParser<A0009_CreateNewCharacter_C2G>(() => (A0009_CreateNewCharacter_C2G)MessagePool.Instance.Fetch(typeof(A0009_CreateNewCharacter_C2G)));
+    public static pb::MessageParser<A0009_CreateNewCharacter_C2G> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private string name_ = "";
+    /// <summary>
+    /// 角色名
+    /// </summary>
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private global::ETModel.ModelType model_ = 0;
+    /// <summary>
+    ///模型编号
+    /// </summary>
+    public global::ETModel.ModelType Model {
+      get { return model_; }
+      set {
+        model_ = value;
+      }
+    }
+
+    private global::ETModel.CareerType career_ = 0;
+    /// <summary>
+    /// 职业编号
+    /// </summary>
+    public global::ETModel.CareerType Career {
+      get { return career_; }
+      set {
+        career_ = value;
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Model != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Model);
+      }
+      if (Career != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Career);
+      }
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Model != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Model);
+      }
+      if (Career != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Career);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      name_ = "";
+      rpcId_ = 0;
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            model_ = (global::ETModel.ModelType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            career_ = (global::ETModel.CareerType) input.ReadEnum();
+            break;
+          }
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public partial class A0009_CreateNewCharacter_G2C : pb::IMessage {
+    private static readonly pb::MessageParser<A0009_CreateNewCharacter_G2C> _parser = new pb::MessageParser<A0009_CreateNewCharacter_G2C>(() => (A0009_CreateNewCharacter_G2C)MessagePool.Instance.Fetch(typeof(A0009_CreateNewCharacter_G2C)));
+    public static pb::MessageParser<A0009_CreateNewCharacter_G2C> Parser { get { return _parser; } }
+
+    private int rpcId_;
+    public int RpcId {
+      get { return rpcId_; }
+      set {
+        rpcId_ = value;
+      }
+    }
+
+    private int error_;
+    public int Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    private string message_ = "";
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RpcId != 0) {
+        output.WriteRawTag(208, 5);
+        output.WriteInt32(RpcId);
+      }
+      if (Error != 0) {
+        output.WriteRawTag(216, 5);
+        output.WriteInt32(Error);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(226, 5);
+        output.WriteString(Message);
+      }
+    }
+
+    public int CalculateSize() {
+      int size = 0;
+      if (RpcId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpcId);
+      }
+      if (Error != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Error);
+      }
+      if (Message.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      return size;
+    }
+
+    public void MergeFrom(pb::CodedInputStream input) {
+      rpcId_ = 0;
+      error_ = 0;
+      message_ = "";
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 720: {
+            RpcId = input.ReadInt32();
+            break;
+          }
+          case 728: {
+            Error = input.ReadInt32();
+            break;
+          }
+          case 738: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   ///玩家请求自己的个人信息 不需要参数
   /// </summary>
   public partial class A0008_GetUserInfo_C2G : pb::IMessage {
@@ -359,27 +559,27 @@ namespace ETModel {
       }
     }
 
-    private float x_;
+    private int x_;
     /// <summary>
     /// 坐标
     /// </summary>
-    public float X {
+    public int X {
       get { return x_; }
       set {
         x_ = value;
       }
     }
 
-    private float y_;
-    public float Y {
+    private int y_;
+    public int Y {
       get { return y_; }
       set {
         y_ = value;
       }
     }
 
-    private float z_;
-    public float Z {
+    private int z_;
+    public int Z {
       get { return z_; }
       set {
         z_ = value;
@@ -415,17 +615,17 @@ namespace ETModel {
         output.WriteRawTag(56);
         output.WriteEnum((int) Region);
       }
-      if (X != 0F) {
-        output.WriteRawTag(69);
-        output.WriteFloat(X);
+      if (X != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(X);
       }
-      if (Y != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(Y);
+      if (Y != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(Y);
       }
-      if (Z != 0F) {
-        output.WriteRawTag(85);
-        output.WriteFloat(Z);
+      if (Z != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(Z);
       }
     }
 
@@ -452,14 +652,14 @@ namespace ETModel {
       if (Region != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Region);
       }
-      if (X != 0F) {
-        size += 1 + 4;
+      if (X != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(X);
       }
-      if (Y != 0F) {
-        size += 1 + 4;
+      if (Y != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Y);
       }
-      if (Z != 0F) {
-        size += 1 + 4;
+      if (Z != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Z);
       }
       return size;
     }
@@ -467,9 +667,9 @@ namespace ETModel {
     public void MergeFrom(pb::CodedInputStream input) {
       name_ = "";
       level_ = 0;
-      x_ = 0f;
-      y_ = 0f;
-      z_ = 0f;
+      x_ = 0;
+      y_ = 0;
+      z_ = 0;
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -504,16 +704,16 @@ namespace ETModel {
             region_ = (global::ETModel.RegionType) input.ReadEnum();
             break;
           }
-          case 69: {
-            X = input.ReadFloat();
+          case 64: {
+            X = input.ReadInt32();
             break;
           }
-          case 77: {
-            Y = input.ReadFloat();
+          case 72: {
+            Y = input.ReadInt32();
             break;
           }
-          case 85: {
-            Z = input.ReadFloat();
+          case 80: {
+            Z = input.ReadInt32();
             break;
           }
         }

@@ -43,5 +43,8 @@
     <component id="n12_m5lz" name="NameInput" src="m5lz1e" fileName="02_CreateCharacter/NameInput.xml" xy="488,478">
       <gearDisplay controller="c3" pages="1"/>
     </component>
+    <text id="n13_ds88" name="Prompt" xy="545,410" size="196,44" fontSize="30" color="#ff0000" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
+      <gearDisplay controller="c3" pages="1"/>
+    </text>
   </displayList>
 </component>

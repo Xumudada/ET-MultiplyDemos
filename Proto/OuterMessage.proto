@@ -1,6 +1,22 @@
 syntax = "proto3";
 package ETModel;
 
+//客户端请求在当前账号下创建新的角色
+message A0009_CreateNewCharacter_C2G // IRequest
+{
+	int32 RpcId = 90;
+	string Name = 1; // 角色名
+	ModelType Model = 2; //模型编号
+	CareerType Career = 3; // 职业编号
+}
+
+message A0009_CreateNewCharacter_G2C // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
 //玩家请求自己的个人信息 不需要参数
 message A0008_GetUserInfo_C2G // IRequest
 {
@@ -26,9 +42,9 @@ message CharacterInfo
 	ModelType Model = 5; // 模型编号
 	WeaponType Weapon = 6; //武器编号
 	RegionType Region = 7; // 区域编号
-	float X = 8; // 坐标
-	float Y = 9;
-	float Z = 10;
+	int32 X = 8; // 坐标
+	int32 Y = 9;
+	int32 Z = 10;
 }
 
 //职业编号

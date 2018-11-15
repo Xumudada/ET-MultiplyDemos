@@ -212,10 +212,20 @@ namespace ETModel
             }
             //判断通过则登陆Realm成功
 
+            //创建唯一Session
             Session sessionGate = Game.Scene.GetComponent<NetOuterComponent>().Create(messageRealm.GateAddress);
-            Game.Scene.AddComponent<SessionComponent>().Session = sessionGate;
+            if (SessionComponent.Instance == null)
+            {
+                //Log.Debug("创建唯一Session");
+                Game.Scene.AddComponent<SessionComponent>().Session = sessionGate;
+            }
+            else
+            {
+                SessionComponent.Instance.Session = sessionGate;
+            }
+            
             A0003_LoginGate_G2C messageGate = (A0003_LoginGate_G2C)await sessionGate.Call(new A0003_LoginGate_C2G() { GateLoginKey = messageRealm.GateLoginKey });
-
+            
             //判断登陆Gate服务器返回结果
             if (messageGate.Error == ErrorCode.ERR_ConnectGateKeyError)
             {
@@ -227,20 +237,19 @@ namespace ETModel
                 return;
             }
             //判断通过则登陆Gate成功
-
-            login.isLogining = false;
+            
             login.Prompt.GObject.asTextField.text = "";
             User user = ComponentFactory.Create<User, long>(messageGate.UserID);
             GamerComponent.Instance.MyUser = user;
-            Log.Debug("登陆成功");
+            //Log.Debug("登陆成功");
 
             //获取角色信息判断应该进入哪个界面
             A0008_GetUserInfo_G2C messageUser = (A0008_GetUserInfo_G2C)await sessionGate.Call(new A0008_GetUserInfo_C2G());
-            
+
             if (messageUser.Characters.Count == 0)
             {
                 //进入创建角色界面
-                CreateCharacterFactory.Create();
+                CreateCharacterFactory.Create(messageUser);
             }
             else
             {
@@ -277,6 +286,73 @@ namespace ETModel
             }
             
             login.Prompt.GObject.asTextField.text = "注册成功";
+        }
+
+        //请求创建角色 参数：角色名 模型编号 职业编号
+        public static async ETVoid CreateNewCharacter(string name, int model, int career)
+        {
+            //模型本身由复数的部件构成 玩家先加载模型编号指定的默认模型再根据身上穿着的装备进行更换装备
+            ModelType modelType = ModelType.NoneModel;
+            CareerType careerType = CareerType.NoneCareer;
+
+            switch (model)
+            {
+                case 0:
+                    modelType = ModelType.Man;
+                    break;
+                case 1:
+                    modelType = ModelType.Women;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (career)
+            {
+                case 0:
+                    careerType = CareerType.Warror;
+                    break;
+                case 1:
+                    careerType = CareerType.Mage;
+                    break;
+                default:
+                    break;
+            }
+            
+            CreateCharacterComponent creater = Game.Scene.GetComponent<FUIComponent>().Get(FUIType.CreateCharacter).GetComponent<CreateCharacterComponent>();
+            
+            //发送创建角色请求
+            A0009_CreateNewCharacter_G2C messageCreate = (A0009_CreateNewCharacter_G2C)await SessionComponent.Instance.Session.Call(new A0009_CreateNewCharacter_C2G() {
+                Name = name,
+                Model = modelType,
+                Career = careerType
+            });
+
+            //判断Gate服务器返回结果
+            if (messageCreate.Error == ErrorCode.ERR_CreateNewCharacter)
+            {
+                creater.Prompt.GObject.asTextField.text = "名称已被占用";
+                creater.NameInput.Get("Input").GObject.asTextInput.text = "";
+                creater.isCreatingCharacter = false;
+                return;
+            }
+            //判断通过则创建角色成功
+            
+            //获取角色信息判断应该进入哪个界面
+            A0008_GetUserInfo_G2C messageUser = (A0008_GetUserInfo_G2C)await SessionComponent.Instance.Session.Call(new A0008_GetUserInfo_C2G());
+
+            if (messageUser.Characters.Count == 0)
+            {
+                //报错
+                Log.Error("没有正确创建角色");
+            }
+            else
+            {
+                //进入角色选择界面
+                SelectCharacterFactory.Create(messageUser);
+            }
+
+            Game.EventSystem.Run(EventIdType.CreateCharacterFinish);
         }
     }
 }

@@ -24,9 +24,61 @@ namespace ETHotfix
                 //获取玩家对象
                 User user = session.GetComponent<SessionUserComponent>().User;
 
-                DBProxyComponent dbProxyComponent = Game.Scene.GetComponent<DBProxyComponent>();
-                UserInfo userInfo = await dbProxyComponent.Query<UserInfo>(user.UserID);
-                
+                DBProxyComponent dbProxy = Game.Scene.GetComponent<DBProxyComponent>();
+                UserInfo userInfo = await dbProxy.Query<UserInfo>(user.UserID);
+                if(userInfo.CharacterID1 != 0)
+                {
+                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
+                    response.Characters.Add(new CharacterInfo() {
+                        Name = character.Name,
+                        Level=character.Level,
+                        Career=character.Career,
+                        Pet=character.Pet,
+                        Model=character.Model,
+                        Weapon=character.Weapon,
+                        Region=character.Region,
+                        X=character.X,
+                        Y=character.Y,
+                        Z=character.Z
+                    });
+                }
+
+                if (userInfo.CharacterID2 != 0)
+                {
+                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
+                    response.Characters.Add(new CharacterInfo()
+                    {
+                        Name = character.Name,
+                        Level = character.Level,
+                        Career = character.Career,
+                        Pet = character.Pet,
+                        Model = character.Model,
+                        Weapon = character.Weapon,
+                        Region = character.Region,
+                        X = character.X,
+                        Y = character.Y,
+                        Z = character.Z
+                    });
+                }
+
+                if (userInfo.CharacterID3 != 0)
+                {
+                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
+                    response.Characters.Add(new CharacterInfo()
+                    {
+                        Name = character.Name,
+                        Level = character.Level,
+                        Career = character.Career,
+                        Pet = character.Pet,
+                        Model = character.Model,
+                        Weapon = character.Weapon,
+                        Region = character.Region,
+                        X = character.X,
+                        Y = character.Y,
+                        Z = character.Z
+                    });
+                }
+
                 reply(response);
             }
             catch (Exception e)

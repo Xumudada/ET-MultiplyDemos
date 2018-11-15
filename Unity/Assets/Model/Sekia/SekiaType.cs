@@ -53,9 +53,11 @@ namespace ETModel
                 //Log.Debug("理想高度为：" + self.Root.GObject.width / ratioDesign);
             }
 
+            //加载一次UI资源
+            await Game.Scene.GetComponent<FUIPackageComponent>().AddPackageAsync(FUIType.Sekia);
+
             //创建登陆界面
-            FUI ui = await SekiaLoginFactory.Create();
-            fuiComponent.Add(ui); 
+            SekiaLoginFactory.Create();
         }
     }
 }

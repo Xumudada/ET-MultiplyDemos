@@ -31,10 +31,10 @@ namespace ETHotfix
             }
         }
 
-        /// <summary>
-        /// 随机生成区号
-        /// </summary>
         private static int value;
+        /// <summary>
+        /// 随机生成区号 1~
+        /// </summary>
         public static long GenerateId()
         {
             //随机获得GateId 1~2
@@ -60,7 +60,7 @@ namespace ETHotfix
 
 
         /// <summary>
-        /// 查询账号所在大区
+        /// 查询账号所在大区 参数为1以上的整数
         /// </summary>
         public static int GetGateAppIdFromUserId(long userID)
         {
