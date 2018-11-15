@@ -17,8 +17,8 @@ namespace ETModel
         //创建角色界面 包括职业/外形可供选择
         public FUI Holder; //模型容器
         GameObject Demo; //玩家角色预览
-        GameObject Weapon; //玩家武器预览
         GoWrapper Wrapper;
+        bool isCreateComplete; //是否加载完成 
 
         public FUI Controller; //控制器
         public Controller Gender;
@@ -46,16 +46,7 @@ namespace ETModel
             Holder = CreateCharacter.Get("Holder");
 
             //加载默认模型 男/战士
-            Demo = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Nan"));
-            Weapon = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Jian"));
-            Weapon.transform.SetParent(Demo.transform, false);
-
-            //将模型插入UI
-            Demo.transform.localPosition = new Vector3(200, -400, 1000); //位置
-            Demo.transform.localScale = new Vector3(600, 600, 600); //大小
-            Demo.transform.localEulerAngles = new Vector3(0, 180, 0); //角度
-            Wrapper = new GoWrapper(Demo);
-            Holder.GObject.asGraph.SetNativeObject(Wrapper);
+            OnControllerChanged();
 
             //添加事件
             //Gender.selectedIndex = 1; //设置被选中的页面
@@ -66,26 +57,39 @@ namespace ETModel
             Career.onChanged.Add(OnControllerChanged);
             //aObject.OnGearStop.Add(OnGearStop); //缓动结束通知
 
+            isCreateComplete = true;
         }
 
         //切换身体部分模型事件
         public void OnControllerChanged()
         {
+            //默认设置
+            string skeleton = "ch_pc_hou_004";
+            string weapon = "ch_we_one_hou_004";
+            string head = "ch_pc_hou_004_tou";
+            string chest = "ch_pc_hou_004_shen";
+            string hand = "ch_pc_hou_004_shou";
+            string feet = "ch_pc_hou_004_jiao";
+            
             //Demo被销毁 Weapon还在
-            UnityEngine.Object.Destroy(Wrapper.wrapTarget);
-            UnityEngine.Object.Destroy(Demo);
-            UnityEngine.Object.Destroy(Weapon);
+            if(isCreateComplete)
+            {
+                UnityEngine.Object.Destroy(Wrapper.wrapTarget);
+                UnityEngine.Object.Destroy(Demo);
+            }
             int genderindex = Gender.selectedIndex;
             string gender = "";
             switch (genderindex)
             {
                 case 0: //男
                     gender = "男";
-                    Demo = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Nan"));
                     break;
                 case 1: //女
                     gender = "女";
-                    Demo = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Nv"));
+                    head = "ch_pc_hou_006_tou";
+                    chest = "ch_pc_hou_006_shen";
+                    hand = "ch_pc_hou_006_shou";
+                    feet = "ch_pc_hou_006_jiao";
                     break;
                 default:
                     break;
@@ -96,28 +100,21 @@ namespace ETModel
             {
                 case 0: //战士
                     Log.Debug(gender + "战士");
-                    Weapon = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Jian"));
                     break;
                 case 1: //法师
                     Log.Debug(gender + "法师");
-                    Weapon = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("Sekia/Jian"));
+                    weapon = "ch_we_one_hou_006";
                     break;
                 default:
                     break;
             }
 
-            Weapon.transform.SetParent(Demo.transform, false);
+            Demo = SekiaHelper.CreateCharacter(skeleton, weapon, head, chest, hand, feet);
             Demo.transform.localPosition = new Vector3(200, -400, 1000); //位置
-            Demo.transform.localScale = new Vector3(600, 600, 600); //大小
+            Demo.transform.localScale = new Vector3(200, 200, 200); //大小
             Demo.transform.localEulerAngles = new Vector3(0, 180, 0); //角度
             Wrapper = new GoWrapper(Demo);
             Holder.GObject.asGraph.SetNativeObject(Wrapper);
-        }
-
-        //切换武器部分模型事件
-        public void OnCareerChanged()
-        {
-            
         }
 
         public void LoginBtnOnClick()
