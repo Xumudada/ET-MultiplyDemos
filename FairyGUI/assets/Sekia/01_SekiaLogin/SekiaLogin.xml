@@ -21,5 +21,9 @@
     <text id="n16_h2nn" name="Prompt" xy="640,130" pivot="0.5,0.5" anchor="true" size="300,50" fontSize="30" color="#ff0000" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
       <relation target="n2_d450" sidePair="center-center,middle-middle"/>
     </text>
+    <graph id="n17_ua6i" name="n17" xy="54,626" size="156,66" type="rect"/>
+    <graph id="n18_ua6i" name="n18" xy="1092,632" size="156,60" type="rect"/>
+    <text id="n19_ua6i" name="n19" xy="72,642" size="178,40" fontSize="30" autoSize="none" text="官方博客"/>
+    <text id="n20_ua6i" name="n20" xy="1134,644" size="106,62" fontSize="30" autoSize="none" text="退出"/>
   </displayList>
 </component>

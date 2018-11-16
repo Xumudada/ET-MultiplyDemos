@@ -20,10 +20,14 @@ namespace ETModel
 	[Message(OuterOpcode.CharacterInfo)]
 	public partial class CharacterInfo {}
 
-//职业编号
+//职业编号 必须项
 //宠物编号
-//模型编号
+//模型编号 必须项
 //武器编号
+//头部装备编号
+//胸装备编号
+//手部装备编号
+//腿部装备编号
 //区域类型
 	[Message(OuterOpcode.A0003_LoginGate_C2G)]
 	public partial class A0003_LoginGate_C2G : IRequest {}

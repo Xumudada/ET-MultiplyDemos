@@ -3,17 +3,17 @@
   <resources>
     <image id="e3631" name="pic1.jpg" path="/01_SekiaLogin/Resource/" exported="true" scale="" scale9grid="480,270,960,540"/>
     <component id="d4502" name="SekiaLogin.xml" path="/01_SekiaLogin/" exported="true"/>
-    <image id="d4503" name="2.png" path="/Effect/Resource/" exported="true"/>
-    <image id="d4504" name="3.png" path="/Effect/Resource/" exported="true"/>
+    <image id="d4503" name="2.png" path="/Effect/Effect1/Resource/" exported="true"/>
+    <image id="d4504" name="3.png" path="/Effect/Effect1/Resource/" exported="true"/>
     <image id="d4505" name="b4.png" path="/01_SekiaLogin/Resource/" exported="true"/>
     <image id="d4506" name="b5.png" path="/01_SekiaLogin/Resource/" exported="true"/>
-    <component id="d4509" name="boss_effect.xml" path="/Effect/" exported="true"/>
+    <component id="d4509" name="boss_effect.xml" path="/Effect/Effect1/" exported="true"/>
     <component id="d450a" name="AcountInput.xml" path="/01_SekiaLogin/" exported="true"/>
     <component id="hagnc" name="Button.xml" path="/01_SekiaLogin/" exported="true"/>
     <image id="hagnf" name="8.png" path="/01_SekiaLogin/Resource/" exported="true" scale="9grid" scale9grid="31,26,62,52"/>
     <component id="i14kj" name="PasswordInput.xml" path="/01_SekiaLogin/" exported="true"/>
     <component id="g5tuk" name="CreateCharacter.xml" path="/02_CreateCharacter/" exported="true"/>
-    <component id="g5tul" name="SelectCharacter.xml" path="/03_SelectCharacter/" exported="true"/>
+    <component id="g5tul" name="Controller.xml" path="/03_SelectCharacter/" exported="true"/>
     <sound id="g5tum" name="7571.mp3" path="/02_CreateCharacter/Resource/" exported="true"/>
     <component id="ax3fn" name="Controller.xml" path="/02_CreateCharacter/" exported="true"/>
     <image id="ax3fq" name="pic2.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
@@ -39,6 +39,48 @@
     <image id="m5lz1c" name="button12.jpg" path="/02_CreateCharacter/Resource/" exported="true"/>
     <component id="m5lz1d" name="Last.xml" path="/02_CreateCharacter/" exported="true"/>
     <component id="m5lz1e" name="NameInput.xml" path="/02_CreateCharacter/" exported="true"/>
+    <image id="ua6i1f" name="pic1.jpg" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1g" name="pic2.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1h" name="pic3.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1i" name="pic4.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1j" name="yuanbao.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1k" name="mail.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <image id="ua6i1l" name="100001.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1m" name="100002.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1n" name="100003.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1o" name="100004.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1p" name="100005.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1q" name="100006.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1r" name="100007.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1s" name="100008.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1t" name="100009.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1u" name="100010.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1v" name="100011.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1w" name="100012.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1x" name="100013.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1y" name="100014.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i1z" name="100015.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i20" name="100016.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i21" name="100017.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i22" name="100018.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i23" name="100019.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i24" name="100020.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i25" name="100021.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i26" name="100022.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i27" name="100023.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i28" name="100024.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i29" name="100025.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2a" name="100026.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2b" name="100027.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2c" name="100028.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2d" name="100029.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2e" name="100030.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2f" name="100031.png" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2g" name="100000.png" path="/Effect/Effect2/" exported="true"/>
+    <movieclip id="ua6i2h" name="MovieClip1.jta" path="/Effect/Effect2/" exported="true"/>
+    <image id="ua6i2i" name="pic5.png" path="/03_SelectCharacter/Resource/" exported="true"/>
+    <component id="ua6i2j" name="SelectCharacter.xml" path="/03_SelectCharacter/" exported="true"/>
+    <component id="kzfm2l" name="SelectButton.xml" path="/03_SelectCharacter/" exported="true"/>
   </resources>
   <publish name="Sekia"/>
 </packageDescription>

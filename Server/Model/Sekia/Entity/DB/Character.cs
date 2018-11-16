@@ -16,6 +16,12 @@
     {
         public long UserID { get; private set; }
 
+        //MMO金钱
+        public int Money { get; set; }
+
+        //未读邮件个数
+        public int Mail { get; set; }
+
         //角色名
         public string Name { get; set; }
 
@@ -29,10 +35,16 @@
         public PetType Pet { get; set; }
 
         //模型编号
-        public ModelType Model { get; set; }
+        public SkeletonType Skeleton { get; set; }
 
         //武器编号
         public WeaponType Weapon { get; set; }
+
+        //装备编号
+        public HeadType Head { get; set; }
+        public ChestType Chest { get; set; }
+        public HandType Hand { get; set; }
+        public FeetType Feet { get; set; }
 
         //区域编号
         public RegionType Region { get; set; }

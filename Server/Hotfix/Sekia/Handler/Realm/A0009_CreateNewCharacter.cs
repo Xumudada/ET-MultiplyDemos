@@ -81,32 +81,45 @@ namespace ETHotfix
                 character.Level = 1;
                 character.Career = message.Career;
                 character.Pet = PetType.NonePet;
-                character.Model = message.Model;
-                switch(character.Career) //初始武器是绑定职业的
+                character.Skeleton = message.Skeleton;
+                switch(character.Career) //初始装备是绑定职业的
                 {
                     case CareerType.Warror:
                         character.Weapon = WeaponType.Sword;
+                        character.Head = HeadType.Head1;
+                        character.Chest = ChestType.Chest1;
+                        character.Hand = HandType.Hand1;
+                        character.Feet = FeetType.Feet1;
                         break;
                     case CareerType.Mage:
                         character.Weapon = WeaponType.Wand;
+                        character.Head = HeadType.Head2;
+                        character.Chest = ChestType.Chest2;
+                        character.Hand = HandType.Hand2;
+                        character.Feet = FeetType.Feet2;
                         break;
                 }
                 character.Region = RegionType.Village; //初始地图为村庄
                 character.X = 1; //设置初始坐标
                 character.Y = 2;
                 character.Z = 3;
+                character.Money = 10;
+                character.Mail = 0;
 
                 //存储数据
-                switch(characterSeat)
+                switch (characterSeat)
                 {
                     case 1:
                         userInfo.CharacterID1 = character.Id;
+                        userInfo.LastPlay = 1;
                         break;
                     case 2:
                         userInfo.CharacterID2 = character.Id;
+                        userInfo.LastPlay = 2;
                         break;
                     case 3:
                         userInfo.CharacterID3 = character.Id;
+                        userInfo.LastPlay = 3;
                         break;
                     default:
                         throw new Exception($"创建新角色错误：{userInfo.Id}");

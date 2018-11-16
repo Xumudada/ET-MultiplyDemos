@@ -31,6 +31,9 @@ namespace ETModel
         public long CharacterID2 { get; set; }
         public long CharacterID3 { get; set; }
 
+        //上次游戏角色序列 1/2/3
+        public int LastPlay { get; set; }
+
         //public List<Ca>
         public void Awake(string name)
         {
@@ -40,6 +43,7 @@ namespace ETModel
             CharacterID1 = 0;
             CharacterID2 = 0;
             CharacterID3 = 0;
+            LastPlay = 0;
         }
 
     }

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1280,720">
-  <displayList/>
+<component size="1280,720" adaptationTest="FitSize">
+  <displayList>
+    <image id="n0_ua6i" name="BackGround" src="ua6i1f" fileName="03_SelectCharacter/Resource/pic1.jpg" xy="0,0" size="1280,720"/>
+    <component id="n1_ua6i" name="Controller" src="g5tul" fileName="03_SelectCharacter/Controller.xml" xy="0,0" controller="c1,0,c2,1,c3,1,c4,0"/>
+  </displayList>
 </component>

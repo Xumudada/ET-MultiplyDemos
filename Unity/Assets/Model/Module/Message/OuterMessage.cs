@@ -10,52 +10,54 @@ namespace ETModel {
 
   #region Enums
   /// <summary>
-  ///职业编号
+  ///职业编号 必须项
   /// </summary>
   public enum CareerType {
-    NoneCareer = 0,
     /// <summary>
     /// 战士
     /// </summary>
-    Warror = 1,
+    Warror = 0,
     /// <summary>
     /// 骑士
     /// </summary>
-    Paladin = 2,
+    Paladin = 1,
     /// <summary>
     /// 猎人
     /// </summary>
-    Hunter = 3,
+    Hunter = 2,
     /// <summary>
     ///萨满
     /// </summary>
-    Shaman = 4,
+    Shaman = 3,
     /// <summary>
     /// 盗贼
     /// </summary>
-    Rogue = 5,
+    Rogue = 4,
     /// <summary>
     /// 术士
     /// </summary>
-    Warlock = 6,
+    Warlock = 5,
     /// <summary>
     /// 法师
     /// </summary>
-    Mage = 7,
+    Mage = 6,
     /// <summary>
     /// 牧师
     /// </summary>
-    Priest = 8,
+    Priest = 7,
     /// <summary>
     /// 德鲁伊
     /// </summary>
-    Druid = 9,
+    Druid = 8,
   }
 
   /// <summary>
   ///宠物编号
   /// </summary>
   public enum PetType {
+    /// <summary>
+    ///没有出战中的宠物
+    /// </summary>
     NonePet = 0,
     /// <summary>
     /// 猫
@@ -68,24 +70,26 @@ namespace ETModel {
   }
 
   /// <summary>
-  ///模型编号
+  ///模型编号 必须项
   /// </summary>
-  public enum ModelType {
-    NoneModel = 0,
+  public enum SkeletonType {
     /// <summary>
     /// 男性
     /// </summary>
-    Man = 1,
+    Man = 0,
     /// <summary>
     /// 女性
     /// </summary>
-    Women = 2,
+    Women = 1,
   }
 
   /// <summary>
   ///武器编号
   /// </summary>
   public enum WeaponType {
+    /// <summary>
+    ///没有穿
+    /// </summary>
     NoneWeapon = 0,
     /// <summary>
     /// 剑
@@ -95,6 +99,54 @@ namespace ETModel {
     /// 法杖
     /// </summary>
     Wand = 2,
+  }
+
+  /// <summary>
+  ///头部装备编号
+  /// </summary>
+  public enum HeadType {
+    /// <summary>
+    /// 没有穿 提供空的模型
+    /// </summary>
+    NoneHead = 0,
+    Head1 = 1,
+    Head2 = 2,
+  }
+
+  /// <summary>
+  ///胸装备编号
+  /// </summary>
+  public enum ChestType {
+    /// <summary>
+    /// 没有穿 给默认上衣
+    /// </summary>
+    NoneChest = 0,
+    Chest1 = 1,
+    Chest2 = 2,
+  }
+
+  /// <summary>
+  ///手部装备编号
+  /// </summary>
+  public enum HandType {
+    /// <summary>
+    /// 没有穿 提供空的模型
+    /// </summary>
+    NoneHand = 0,
+    Hand1 = 1,
+    Hand2 = 2,
+  }
+
+  /// <summary>
+  ///腿部装备编号
+  /// </summary>
+  public enum FeetType {
+    /// <summary>
+    /// 没有穿 给默认裤子
+    /// </summary>
+    NoneFeet = 0,
+    Feet1 = 1,
+    Feet2 = 2,
   }
 
   /// <summary>
@@ -149,14 +201,14 @@ namespace ETModel {
       }
     }
 
-    private global::ETModel.ModelType model_ = 0;
+    private global::ETModel.SkeletonType skeleton_ = 0;
     /// <summary>
-    ///模型编号
+    ///骨骼编号
     /// </summary>
-    public global::ETModel.ModelType Model {
-      get { return model_; }
+    public global::ETModel.SkeletonType Skeleton {
+      get { return skeleton_; }
       set {
-        model_ = value;
+        skeleton_ = value;
       }
     }
 
@@ -176,9 +228,9 @@ namespace ETModel {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Model != 0) {
+      if (Skeleton != 0) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Model);
+        output.WriteEnum((int) Skeleton);
       }
       if (Career != 0) {
         output.WriteRawTag(24);
@@ -198,8 +250,8 @@ namespace ETModel {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Model != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Model);
+      if (Skeleton != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Skeleton);
       }
       if (Career != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Career);
@@ -221,7 +273,7 @@ namespace ETModel {
             break;
           }
           case 16: {
-            model_ = (global::ETModel.ModelType) input.ReadEnum();
+            skeleton_ = (global::ETModel.SkeletonType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -410,8 +462,23 @@ namespace ETModel {
       set { characters_ = value; }
     }
 
+    private int lastPlay_;
+    /// <summary>
+    ///上次游戏使用的角色 1、2、3
+    /// </summary>
+    public int LastPlay {
+      get { return lastPlay_; }
+      set {
+        lastPlay_ = value;
+      }
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       characters_.WriteTo(output, _repeated_characters_codec);
+      if (LastPlay != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(LastPlay);
+      }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
         output.WriteInt32(RpcId);
@@ -438,12 +505,16 @@ namespace ETModel {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       size += characters_.CalculateSize(_repeated_characters_codec);
+      if (LastPlay != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LastPlay);
+      }
       return size;
     }
 
     public void MergeFrom(pb::CodedInputStream input) {
       for (int i = 0; i < characters_.Count; i++) { MessagePool.Instance.Recycle(characters_[i]); }
       characters_.Clear();
+      lastPlay_ = 0;
       rpcId_ = 0;
       error_ = 0;
       message_ = "";
@@ -455,6 +526,10 @@ namespace ETModel {
             break;
           case 10: {
             characters_.AddEntriesFrom(input, _repeated_characters_codec);
+            break;
+          }
+          case 16: {
+            LastPlay = input.ReadInt32();
             break;
           }
           case 720: {
@@ -526,14 +601,14 @@ namespace ETModel {
       }
     }
 
-    private global::ETModel.ModelType model_ = 0;
+    private global::ETModel.SkeletonType skeleton_ = 0;
     /// <summary>
-    /// 模型编号
+    /// 骨骼编号
     /// </summary>
-    public global::ETModel.ModelType Model {
-      get { return model_; }
+    public global::ETModel.SkeletonType Skeleton {
+      get { return skeleton_; }
       set {
-        model_ = value;
+        skeleton_ = value;
       }
     }
 
@@ -586,6 +661,60 @@ namespace ETModel {
       }
     }
 
+    private global::ETModel.HeadType head_ = 0;
+    public global::ETModel.HeadType Head {
+      get { return head_; }
+      set {
+        head_ = value;
+      }
+    }
+
+    private global::ETModel.ChestType chest_ = 0;
+    public global::ETModel.ChestType Chest {
+      get { return chest_; }
+      set {
+        chest_ = value;
+      }
+    }
+
+    private global::ETModel.HandType hand_ = 0;
+    public global::ETModel.HandType Hand {
+      get { return hand_; }
+      set {
+        hand_ = value;
+      }
+    }
+
+    private global::ETModel.FeetType feet_ = 0;
+    public global::ETModel.FeetType Feet {
+      get { return feet_; }
+      set {
+        feet_ = value;
+      }
+    }
+
+    private int money_;
+    /// <summary>
+    ///MMO金钱
+    /// </summary>
+    public int Money {
+      get { return money_; }
+      set {
+        money_ = value;
+      }
+    }
+
+    private int mail_;
+    /// <summary>
+    ///未读邮件数量
+    /// </summary>
+    public int Mail {
+      get { return mail_; }
+      set {
+        mail_ = value;
+      }
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -603,9 +732,9 @@ namespace ETModel {
         output.WriteRawTag(32);
         output.WriteEnum((int) Pet);
       }
-      if (Model != 0) {
+      if (Skeleton != 0) {
         output.WriteRawTag(40);
-        output.WriteEnum((int) Model);
+        output.WriteEnum((int) Skeleton);
       }
       if (Weapon != 0) {
         output.WriteRawTag(48);
@@ -627,6 +756,30 @@ namespace ETModel {
         output.WriteRawTag(80);
         output.WriteInt32(Z);
       }
+      if (Head != 0) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) Head);
+      }
+      if (Chest != 0) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Chest);
+      }
+      if (Hand != 0) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Hand);
+      }
+      if (Feet != 0) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) Feet);
+      }
+      if (Money != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(Money);
+      }
+      if (Mail != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(Mail);
+      }
     }
 
     public int CalculateSize() {
@@ -643,8 +796,8 @@ namespace ETModel {
       if (Pet != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pet);
       }
-      if (Model != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Model);
+      if (Skeleton != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Skeleton);
       }
       if (Weapon != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Weapon);
@@ -661,6 +814,24 @@ namespace ETModel {
       if (Z != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Z);
       }
+      if (Head != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Head);
+      }
+      if (Chest != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Chest);
+      }
+      if (Hand != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Hand);
+      }
+      if (Feet != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Feet);
+      }
+      if (Money != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Money);
+      }
+      if (Mail != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Mail);
+      }
       return size;
     }
 
@@ -670,6 +841,8 @@ namespace ETModel {
       x_ = 0;
       y_ = 0;
       z_ = 0;
+      money_ = 0;
+      mail_ = 0;
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -693,7 +866,7 @@ namespace ETModel {
             break;
           }
           case 40: {
-            model_ = (global::ETModel.ModelType) input.ReadEnum();
+            skeleton_ = (global::ETModel.SkeletonType) input.ReadEnum();
             break;
           }
           case 48: {
@@ -714,6 +887,30 @@ namespace ETModel {
           }
           case 80: {
             Z = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            head_ = (global::ETModel.HeadType) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            chest_ = (global::ETModel.ChestType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            hand_ = (global::ETModel.HandType) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            feet_ = (global::ETModel.FeetType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            Money = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            Mail = input.ReadInt32();
             break;
           }
         }

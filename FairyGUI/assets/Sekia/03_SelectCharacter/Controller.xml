@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" bgColorEnabled="true" bgColor="#000000">
+  <controller name="c1" alias="SeatSelect" autoRadioGroupDepth="true" exported="true" pages="0,,1,,2," selected="0"/>
+  <controller name="c2" alias="NoneorExist1" autoRadioGroupDepth="true" exported="true" pages="0,,1," selected="0"/>
+  <controller name="c3" alias="NoneorExist2" autoRadioGroupDepth="true" exported="true" pages="0,,1," selected="0"/>
+  <controller name="c4" alias="NoneorExist3" autoRadioGroupDepth="true" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n17_ua6i" name="SeatSelectedNot1" src="ua6i1g" fileName="03_SelectCharacter/Resource/pic2.png" xy="300,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n52_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="1,2"/>
+    </image>
+    <image id="n20_ua6i" name="SeatSelectedYes1" src="ua6i1h" fileName="03_SelectCharacter/Resource/pic3.png" xy="300,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n52_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n23_ua6i" name="default1" src="ua6i1i" fileName="03_SelectCharacter/Resource/pic4.png" xy="300,250" pivot="0.5,0.5" anchor="true" group="n52_ua6i" aspect="true">
+      <gearDisplay controller="c2" pages="0"/>
+    </image>
+    <text id="n26_ua6i" name="Create1" xy="300,445" pivot="0.5,0.5" anchor="true" size="250,40" group="n52_ua6i" fontSize="30" color="#003399" align="center" vAlign="middle" autoSize="none" text="创建角色">
+      <gearDisplay controller="c2" pages="0"/>
+    </text>
+    <image id="n54_ua6i" name="Frame1" src="ua6i2i" fileName="03_SelectCharacter/Resource/pic5.png" xy="300,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n52_ua6i" aspect="true">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearLook controller="c1" pages="0,1,2" values="1,0,0,1|0,0,0,1|0,0,0,1"/>
+    </image>
+    <graph id="n12_ua6i" name="Holder1" xy="300,250" pivot="0.5,0.5" anchor="true" size="1,1" group="n52_ua6i" type="rect">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearLook controller="c1" pages="1,2" values="1,0,1,1|1,0,1,1" default="1,0,0,1"/>
+    </graph>
+    <image id="n35_ua6i" name="n35" src="ua6i1j" fileName="03_SelectCharacter/Resource/yuanbao.png" xy="200,425" pivot="0.5,0.5" anchor="true" group="n52_ua6i">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearLook controller="c1" pages="1,2" values="1,0,1,1|1,0,1,1" default="1,0,0,1"/>
+      <gearColor controller="c1" pages="1,2" values="#999999|#999999" default="#ffffff"/>
+    </image>
+    <image id="n36_ua6i" name="n36" src="ua6i1k" fileName="03_SelectCharacter/Resource/mail.png" xy="200,465" pivot="0.5,0.5" anchor="true" size="37,23" group="n52_ua6i" aspect="true">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearColor controller="c1" pages="1,2" values="#999999|#999999" default="#ffffff"/>
+    </image>
+    <text id="n29_ua6i" name="Money1" xy="340,425" pivot="0.5,0.5" anchor="true" size="180,40" group="n52_ua6i" fontSize="30" color="#ffffff" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#ffffff,#000000|#999999,#000000|#999999,#000000"/>
+    </text>
+    <text id="n30_ua6i" name="Mail1" xy="340,465" pivot="0.5,0.5" anchor="true" size="180,40" group="n52_ua6i" fontSize="30" color="#ffffff" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999&#xA;">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearColor controller="c1" pages="1,2" values="#999999,#000000|#999999,#000000" default="#ffffff,#000000"/>
+    </text>
+    <text id="n41_ua6i" name="Level1" xy="300,520" pivot="0.5,0.5" anchor="true" size="250,40" group="n52_ua6i" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="Lv 1  测试">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#ffffff,#000000|#999999,#000000|#999999,#000000"/>
+    </text>
+    <text id="n42_ua6i" name="Location1" xy="300,560" pivot="0.5,0.5" anchor="true" size="250,40" group="n52_ua6i" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="xx村庄">
+      <gearDisplay controller="c2" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#ffffff,#000000|#999999,#000000|#999999,#000000"/>
+    </text>
+    <component id="n106_kzfm" name="Select1" src="kzfm2l" fileName="03_SelectCharacter/SelectButton.xml" xy="300,350" pivot="0.5,0.5" anchor="true" group="n52_ua6i" alpha="0"/>
+    <group id="n52_ua6i" name="Seat1" xy="200,250" size="400,600"/>
+    <image id="n18_ua6i" name="SeatSelectedNot2" src="ua6i1g" fileName="03_SelectCharacter/Resource/pic2.png" xy="640,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n99_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="0,2"/>
+    </image>
+    <image id="n21_ua6i" name="SeatSelectedYes2" src="ua6i1h" fileName="03_SelectCharacter/Resource/pic3.png" xy="640,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n99_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+    <image id="n97_ua6i" name="default2" src="ua6i1i" fileName="03_SelectCharacter/Resource/pic4.png" xy="640,250" pivot="0.5,0.5" anchor="true" group="n99_ua6i" aspect="true">
+      <gearDisplay controller="c3" pages="0"/>
+    </image>
+    <text id="n98_ua6i" name="Create2" xy="640,445" pivot="0.5,0.5" anchor="true" size="250,40" group="n99_ua6i" fontSize="30" color="#003399" align="center" vAlign="middle" autoSize="none" text="创建角色">
+      <gearDisplay controller="c3" pages="0"/>
+    </text>
+    <image id="n79_ua6i" name="Frame2" src="ua6i2i" fileName="03_SelectCharacter/Resource/pic5.png" xy="640,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n99_ua6i" aspect="true" alpha="0">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearLook controller="c1" pages="0,2" values="0,0,0,1|0,0,0,1" default="1,0,0,1"/>
+    </image>
+    <graph id="n80_ua6i" name="Holder2" xy="640,250" pivot="0.5,0.5" anchor="true" size="1,1" group="n99_ua6i" grayed="true" type="rect">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearLook controller="c1" pages="0,1,2" values="1,0,1,1|1,0,0,1|1,0,1,1"/>
+    </graph>
+    <image id="n81_ua6i" name="n81" src="ua6i1j" fileName="03_SelectCharacter/Resource/yuanbao.png" xy="540,425" pivot="0.5,0.5" anchor="true" group="n99_ua6i" grayed="true" color="#999999">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearLook controller="c1" pages="0,1,2" values="1,0,1,1|1,0,0,1|1,0,1,1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999|#ffffff|#999999"/>
+    </image>
+    <image id="n83_ua6i" name="n83" src="ua6i1k" fileName="03_SelectCharacter/Resource/mail.png" xy="540,465" pivot="0.5,0.5" anchor="true" size="37,23" group="n99_ua6i" aspect="true" color="#999999">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999|#ffffff|#999999"/>
+    </image>
+    <text id="n82_ua6i" name="Money2" xy="680,425" pivot="0.5,0.5" anchor="true" size="180,40" group="n99_ua6i" fontSize="30" color="#999999" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#ffffff,#000000|#999999,#000000"/>
+    </text>
+    <text id="n84_ua6i" name="Mail2" xy="680,465" pivot="0.5,0.5" anchor="true" size="180,40" group="n99_ua6i" fontSize="30" color="#999999" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999&#xA;">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#ffffff,#000000|#999999,#000000"/>
+    </text>
+    <text id="n85_ua6i" name="Level2" xy="640,520" pivot="0.5,0.5" anchor="true" size="250,40" group="n99_ua6i" fontSize="30" color="#999999" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="Lv 1  测试">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#ffffff,#000000|#999999,#000000"/>
+    </text>
+    <text id="n86_ua6i" name="Location2" xy="640,560" pivot="0.5,0.5" anchor="true" size="250,40" group="n99_ua6i" fontSize="24" color="#999999" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="xx村庄">
+      <gearDisplay controller="c3" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#ffffff,#000000|#999999,#000000"/>
+    </text>
+    <component id="n107_kzfm" name="Select2" src="kzfm2l" fileName="03_SelectCharacter/SelectButton.xml" xy="640,350" pivot="0.5,0.5" anchor="true" group="n99_ua6i" alpha="0"/>
+    <group id="n99_ua6i" name="Seat2" xy="540,250" size="400,600"/>
+    <image id="n19_ua6i" name="SeatSelectedNot3" src="ua6i1g" fileName="03_SelectCharacter/Resource/pic2.png" xy="980,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n102_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="0,1"/>
+    </image>
+    <image id="n22_ua6i" name="SeatSelectedYes3" src="ua6i1h" fileName="03_SelectCharacter/Resource/pic3.png" xy="980,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n102_ua6i" aspect="true">
+      <gearDisplay controller="c1" pages="2"/>
+    </image>
+    <image id="n100_ua6i" name="default3" src="ua6i1i" fileName="03_SelectCharacter/Resource/pic4.png" xy="980,250" pivot="0.5,0.5" anchor="true" group="n102_ua6i" aspect="true">
+      <gearDisplay controller="c4" pages="0"/>
+    </image>
+    <text id="n101_ua6i" name="Create3" xy="980,445" pivot="0.5,0.5" anchor="true" size="250,40" group="n102_ua6i" fontSize="30" color="#003399" align="center" vAlign="middle" autoSize="none" text="创建角色">
+      <gearDisplay controller="c4" pages="0"/>
+    </text>
+    <image id="n88_ua6i" name="Frame3" src="ua6i2i" fileName="03_SelectCharacter/Resource/pic5.png" xy="980,350" pivot="0.5,0.5" anchor="true" size="300,500" group="n102_ua6i" aspect="true" alpha="0">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearLook controller="c1" pages="0,1" values="0,0,0,1|0,0,0,1" default="1,0,0,1"/>
+    </image>
+    <graph id="n89_ua6i" name="Holder3" xy="980,250" pivot="0.5,0.5" anchor="true" size="1,1" group="n102_ua6i" grayed="true" type="rect">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearLook controller="c1" pages="0,1,2" values="1,0,1,1|1,0,1,1|1,0,0,1"/>
+    </graph>
+    <image id="n90_ua6i" name="n90" src="ua6i1j" fileName="03_SelectCharacter/Resource/yuanbao.png" xy="880,425" pivot="0.5,0.5" anchor="true" group="n102_ua6i" grayed="true" color="#999999">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearLook controller="c1" pages="0,1,2" values="1,0,1,1|1,0,1,1|1,0,0,1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999|#999999|#ffffff"/>
+    </image>
+    <image id="n92_ua6i" name="n92" src="ua6i1k" fileName="03_SelectCharacter/Resource/mail.png" xy="880,465" pivot="0.5,0.5" anchor="true" size="37,23" group="n102_ua6i" aspect="true" color="#999999">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999|#999999|#ffffff"/>
+    </image>
+    <text id="n91_ua6i" name="Money3" xy="1020,425" pivot="0.5,0.5" anchor="true" size="180,40" group="n102_ua6i" fontSize="30" color="#999999" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#999999,#000000|#ffffff,#000000"/>
+    </text>
+    <text id="n93_ua6i" name="Mail3" xy="1020,465" pivot="0.5,0.5" anchor="true" size="180,40" group="n102_ua6i" fontSize="30" color="#999999" align="right" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="9999&#xA;">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#999999,#000000|#ffffff,#000000"/>
+    </text>
+    <text id="n94_ua6i" name="Level3" xy="980,520" pivot="0.5,0.5" anchor="true" size="250,40" group="n102_ua6i" fontSize="30" color="#999999" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="Lv 1  测试">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#999999,#000000|#ffffff,#000000"/>
+    </text>
+    <text id="n95_ua6i" name="Location3" xy="980,560" pivot="0.5,0.5" anchor="true" size="250,40" group="n102_ua6i" fontSize="24" color="#999999" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="xx村庄">
+      <gearDisplay controller="c4" pages="1"/>
+      <gearColor controller="c1" pages="0,1,2" values="#999999,#000000|#999999,#000000|#ffffff,#000000"/>
+    </text>
+    <component id="n108_kzfm" name="Select3" src="kzfm2l" fileName="03_SelectCharacter/SelectButton.xml" xy="980,350" pivot="0.5,0.5" anchor="true" group="n102_ua6i" alpha="0"/>
+    <group id="n102_ua6i" name="Seat3" xy="880,250" size="400,600"/>
+  </displayList>
+</component>

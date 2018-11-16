@@ -29,18 +29,29 @@ namespace ETHotfix
                 if(userInfo.CharacterID1 != 0)
                 {
                     Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
-                    response.Characters.Add(new CharacterInfo() {
+                    response.Characters.Add(new CharacterInfo()
+                    {
                         Name = character.Name,
-                        Level=character.Level,
-                        Career=character.Career,
-                        Pet=character.Pet,
-                        Model=character.Model,
-                        Weapon=character.Weapon,
-                        Region=character.Region,
-                        X=character.X,
-                        Y=character.Y,
-                        Z=character.Z
+                        Level = character.Level,
+                        Career = character.Career,
+                        Pet = character.Pet,
+                        Skeleton = character.Skeleton,
+                        Weapon = character.Weapon,
+                        Region = character.Region,
+                        X = character.X,
+                        Y = character.Y,
+                        Z = character.Z,
+                        Head = character.Head,
+                        Chest = character.Chest,
+                        Hand = character.Hand,
+                        Feet = character.Feet,
+                        Money = character.Money,
+                        Mail = character.Mail
                     });
+                }
+                else
+                {
+                    response.Characters.Add(new CharacterInfo());
                 }
 
                 if (userInfo.CharacterID2 != 0)
@@ -52,13 +63,23 @@ namespace ETHotfix
                         Level = character.Level,
                         Career = character.Career,
                         Pet = character.Pet,
-                        Model = character.Model,
+                        Skeleton = character.Skeleton,
                         Weapon = character.Weapon,
                         Region = character.Region,
                         X = character.X,
                         Y = character.Y,
-                        Z = character.Z
+                        Z = character.Z,
+                        Head = character.Head,
+                        Chest = character.Chest,
+                        Hand = character.Hand,
+                        Feet = character.Feet,
+                        Money = character.Money,
+                        Mail = character.Mail
                     });
+                }
+                else
+                {
+                    response.Characters.Add(new CharacterInfo());
                 }
 
                 if (userInfo.CharacterID3 != 0)
@@ -70,14 +91,27 @@ namespace ETHotfix
                         Level = character.Level,
                         Career = character.Career,
                         Pet = character.Pet,
-                        Model = character.Model,
+                        Skeleton = character.Skeleton,
                         Weapon = character.Weapon,
                         Region = character.Region,
                         X = character.X,
                         Y = character.Y,
-                        Z = character.Z
+                        Z = character.Z,
+                        Head = character.Head,
+                        Chest = character.Chest,
+                        Hand = character.Hand,
+                        Feet = character.Feet,
+                        Money = character.Money,
+                        Mail = character.Mail
                     });
                 }
+                else
+                {
+                    response.Characters.Add(new CharacterInfo());
+                }
+
+                //设置上次游戏角色
+                response.LastPlay = userInfo.LastPlay;
 
                 reply(response);
             }

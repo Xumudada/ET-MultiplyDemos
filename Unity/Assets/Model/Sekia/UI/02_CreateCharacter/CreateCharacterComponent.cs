@@ -50,7 +50,7 @@ namespace ETModel
 
             //添加事件
             //Gender.selectedIndex = 1; //设置被选中的页面
-            //Gender.setSelectedIndex(1); 设置被选中的页面而不触发Change事件
+            //Gender.SetSelectedIndex(1); //设置被选中的页面而不触发Change事件
             Controller.Get("Back").GObject.asButton.onClick.Add(OnBack); //返回角色列表或者退出游戏
             Controller.Get("Complete").GObject.asButton.onClick.Add(OnCheckCreate); //检验角色名称是否合法
             Gender.onChanged.Add(OnControllerChanged);
@@ -111,8 +111,8 @@ namespace ETModel
             }
 
             Demo = SekiaHelper.CreateCharacter(skeleton, weapon, head, chest, hand, feet);
-            Demo.transform.localPosition = new Vector3(200, -400, 1000); //位置
-            Demo.transform.localScale = new Vector3(200, 200, 200); //大小
+            Demo.transform.localPosition = new Vector3(30, -125, 1000); //位置
+            Demo.transform.localScale = new Vector3(125, 125, 125); //大小
             Demo.transform.localEulerAngles = new Vector3(0, 180, 0); //角度
             Wrapper = new GoWrapper(Demo);
             Holder.GObject.asGraph.SetNativeObject(Wrapper);

@@ -2,7 +2,7 @@
 <component size="1280,720" adaptationTest="FitHeightAndSetCenter">
   <controller name="c1" alias="gender" autoRadioGroupDepth="true" exported="true" pages="0,男,1,女" selected="0"/>
   <controller name="c2" alias="Career" autoRadioGroupDepth="true" exported="true" pages="0,战士,1,法师" selected="0"/>
-  <controller name="c3" alias="Step" exported="true" pages="0,职业,1,取名" selected="0"/>
+  <controller name="c3" alias="Step" exported="true" pages="0,职业,1,取名" selected="1"/>
   <displayList>
     <image id="n1_ax3f" name="ZhanShi" src="ax3fr" fileName="02_CreateCharacter/Resource/pic1.jpg" xy="0,0" size="1280,720">
       <gearDisplay controller="c2" pages="0"/>
@@ -43,7 +43,7 @@
     <component id="n12_m5lz" name="NameInput" src="m5lz1e" fileName="02_CreateCharacter/NameInput.xml" xy="488,478">
       <gearDisplay controller="c3" pages="1"/>
     </component>
-    <text id="n13_ds88" name="Prompt" xy="545,410" size="196,44" fontSize="30" color="#ff0000" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
+    <text id="n13_ds88" name="Prompt" xy="545,410" size="196,44" fontSize="30" color="#ff0000" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="提示消息">
       <gearDisplay controller="c3" pages="1"/>
     </text>
   </displayList>

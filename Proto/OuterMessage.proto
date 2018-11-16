@@ -6,7 +6,7 @@ message A0009_CreateNewCharacter_C2G // IRequest
 {
 	int32 RpcId = 90;
 	string Name = 1; // 角色名
-	ModelType Model = 2; //模型编号
+	SkeletonType Skeleton = 2; //骨骼编号
 	CareerType Career = 3; // 职业编号
 }
 
@@ -30,6 +30,7 @@ message A0008_GetUserInfo_G2C // IResponse
 	int32 Error = 91;
 	string Message = 92;
 	repeated CharacterInfo Characters = 1;
+	int32 LastPlay = 2; //上次游戏使用的角色 1、2、3
 }
 
 //单个角色的简要描述
@@ -39,51 +40,87 @@ message CharacterInfo
 	int32 Level = 2; // 角色等级
 	CareerType Career = 3; // 职业编号
 	PetType Pet = 4; // 宠物编号
-	ModelType Model = 5; // 模型编号
+	SkeletonType Skeleton = 5; // 骨骼编号
 	WeaponType Weapon = 6; //武器编号
 	RegionType Region = 7; // 区域编号
 	int32 X = 8; // 坐标
 	int32 Y = 9;
 	int32 Z = 10;
+	HeadType Head = 11;
+	ChestType Chest = 12;
+	HandType Hand = 13;
+	FeetType Feet = 14;
+	int32 Money = 15; //MMO金钱
+	int32 Mail = 16; //未读邮件数量
 }
 
-//职业编号
+//职业编号 必须项
 enum CareerType
 {
-	NoneCareer = 0;
-	Warror = 1; // 战士
-    Paladin = 2; // 骑士
-	Hunter = 3; // 猎人
-	Shaman = 4; //萨满
-	Rogue = 5; // 盗贼
-	Warlock = 6; // 术士
-	Mage = 7; // 法师
-	Priest = 8; // 牧师
-	Druid = 9; // 德鲁伊
+	Warror = 0; // 战士
+    Paladin = 1; // 骑士
+	Hunter = 2; // 猎人
+	Shaman = 3; //萨满
+	Rogue = 4; // 盗贼
+	Warlock = 5; // 术士
+	Mage = 6; // 法师
+	Priest = 7; // 牧师
+	Druid = 8; // 德鲁伊
 }
 
 //宠物编号
 enum PetType
 {
-	NonePet = 0;
+	NonePet = 0; //没有出战中的宠物
 	Cat = 1; // 猫
     Dog = 2; // 狗
 }
 
-//模型编号
-enum ModelType
+//模型编号 必须项
+enum SkeletonType
 {
-	NoneModel = 0;
-	Man = 1; // 男性
-    Women = 2; // 女性
+	Man = 0; // 男性
+    Women = 1; // 女性
 }
 
 //武器编号
 enum WeaponType
 {
-	NoneWeapon = 0;
+	NoneWeapon = 0; //没有穿
 	Sword = 1; // 剑
     Wand = 2; // 法杖
+}
+
+//头部装备编号
+enum HeadType
+{
+	NoneHead = 0; // 没有穿 提供空的模型
+	Head1 = 1;
+    Head2 = 2;
+}
+
+//胸装备编号
+enum ChestType
+{
+	NoneChest = 0; // 没有穿 给默认上衣
+	Chest1 = 1;
+    Chest2 = 2;
+}
+
+//手部装备编号
+enum HandType
+{
+	NoneHand = 0; // 没有穿 提供空的模型
+	Hand1 = 1;
+    Hand2 = 2;
+}
+
+//腿部装备编号
+enum FeetType
+{
+	NoneFeet = 0; // 没有穿 给默认裤子
+	Feet1 = 1;
+    Feet2 = 2;
 }
 
 //区域类型
