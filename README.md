@@ -18,8 +18,10 @@ ET主群：474643097
 希望参与完善游戏/推荐代码可联系咲夜詩
 QQ449224404
 
-ET版本升级指南：
+# 运行向导
+软件环境：VS2017（跨平台开发支持/Unity支持）/MongoDB默认配置 ⇒ 运行启动.bat启动服务端
 
+# ET版本升级指南
 ♦Unity部分，同时打开旧的客户端和全新的ET客户端，按顺序将文件夹拖入新客户端：
 Res/Config/* （自定义配置）
 Bundles/Sekia（删除Bundles目录下原有文件）
@@ -40,7 +42,7 @@ Server/Model/Sekia
 Server/otfix/Module/Message/OuterMessageDispatcher.cs
 
 
-后续操作：
+# 后续操作：
 
 使用3dmax等工具拆解出地图上的防御塔
 技能特效表
