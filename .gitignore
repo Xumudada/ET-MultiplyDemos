@@ -17,6 +17,11 @@ Opt/
 **/.vs
 */.svn/
 FairyGUI/.objs/
+/Unity/Unity.Editor.csproj
+/Unity/Unity.Hotfix.csproj
+/Unity/Unity.Model.csproj
+/Unity/Unity.sln
+/Unity/Unity.ThirdParty.csproj
 .svn/
 bin/
 Bin/
