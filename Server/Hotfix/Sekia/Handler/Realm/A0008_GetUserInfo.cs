@@ -56,7 +56,7 @@ namespace ETHotfix
 
                 if (userInfo.CharacterID2 != 0)
                 {
-                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
+                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID2);
                     response.Characters.Add(new CharacterInfo()
                     {
                         Name = character.Name,
@@ -84,7 +84,7 @@ namespace ETHotfix
 
                 if (userInfo.CharacterID3 != 0)
                 {
-                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID1);
+                    Character character = await dbProxy.Query<Character>(userInfo.CharacterID3);
                     response.Characters.Add(new CharacterInfo()
                     {
                         Name = character.Name,

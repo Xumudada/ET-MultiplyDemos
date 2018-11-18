@@ -29,6 +29,8 @@ namespace ETModel
         
         public FUI NameInput; //角色名输入框
         public FUI Prompt; //提示消息
+
+        public int Seat; //当前创建角色界面对应的位置 由外部设置
         
         public void Awake(A0008_GetUserInfo_G2C message)
         {
@@ -58,6 +60,7 @@ namespace ETModel
             //aObject.OnGearStop.Add(OnGearStop); //缓动结束通知
 
             isCreateComplete = true;
+            Log.Debug("加载完创建角色界面");
         }
 
         //切换身体部分模型事件
@@ -144,7 +147,37 @@ namespace ETModel
                 return;
             }
             this.isCreatingCharacter = true;
-            SekiaHelper.CreateNewCharacter(NameInput.Get("Input").GObject.asTextInput.text, Gender.selectedIndex, Career.selectedIndex).NoAwait();
+            SekiaHelper.CreateNewCharacter(Seat, NameInput.Get("Input").GObject.asTextInput.text, Gender.selectedIndex, Career.selectedIndex).NoAwait();
+        }
+        
+        //退出界面需要重置所有元件属性
+        public override void Dispose()
+        {
+            if (this.IsDisposed)
+            {
+                return;
+            }
+            base.Dispose();
+
+            Log.Debug("退出创建角色界面");
+            Controller.Get("Back").GObject.asButton.onClick.Remove(OnBack);
+            Controller.Get("Complete").GObject.asButton.onClick.Remove(OnCheckCreate);
+            Controller.Get("Back").Dispose();
+            Controller.Get("Complete").Dispose();
+
+            Holder.Dispose();
+            Demo = null;
+            Wrapper = null;
+            isCreateComplete = false;
+            isCreatingCharacter = false;
+            messageUser = null;
+            Controller.Dispose();
+            Gender = null;
+            Career = null;
+            Step = null;
+            NameInput.Dispose();
+            Prompt.Dispose();
+            Seat = 0;
         }
     }
 }

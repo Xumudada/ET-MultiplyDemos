@@ -104,12 +104,12 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: eee220a9b8e5e42a1a582c6c888ec5bd, type: 2}
-  - {fileID: 7400000, guid: 0159b0f1d9c3641118671b6989c0d039, type: 2}
-  - {fileID: 7400000, guid: ac776179471e7471185e127e7f47d85d, type: 2}
-  - {fileID: 7400000, guid: 3862d29e2f6a34251b09f603de342ec3, type: 2}
-  - {fileID: 7400000, guid: 1f3a7a648a60047b4900a2cd505de9d4, type: 2}
-  - {fileID: 7400000, guid: fb20a1f51e24d4b90a626f8d6b3ed4e7, type: 2}
+  - {fileID: 7400000, guid: 72a80ad40e736ba43bd23b222a2c282b, type: 2}
+  - {fileID: 7400000, guid: 65b12ba966f6c384bb6eac0f200b6c90, type: 2}
+  - {fileID: 7400000, guid: f8bfa86e39851cc4fa73308c6f40fbc1, type: 2}
+  - {fileID: 7400000, guid: 4e4de521b1829b5498683c1ca004958f, type: 2}
+  - {fileID: 7400000, guid: e1298198b940bfa4fa57a0e637cd4465, type: 2}
+  - {fileID: 7400000, guid: 67010c1c2604c894fa7f7a5b080513e0, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

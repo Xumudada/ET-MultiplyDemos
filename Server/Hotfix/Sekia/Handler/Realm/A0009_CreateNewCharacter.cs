@@ -47,29 +47,31 @@ namespace ETHotfix
 
                 //检查玩家是否有资格创建新角色
                 bool canCreate = false;
-                int characterSeat = 0; //玩家的可创建新角色的空位
-                if(userInfo.CharacterID1 == 0)
+                int characterSeat = message.Seat; //玩家请求创建的角色位置
+                switch(characterSeat)
                 {
-                    canCreate = true;
-                    characterSeat = 1;
-                }
-                if (userInfo.CharacterID2 == 0 && characterSeat == 0) //前面的位置优先
-                {
-                    canCreate = true;
-                    characterSeat = 2;
-                }
-                if (userInfo.CharacterID3 == 0 && characterSeat == 0) //前面的位置优先
-                {
-                    canCreate = true;
-                    characterSeat = 3;
+                    case 1:
+                        if (userInfo.CharacterID1 == 0)
+                            canCreate = true;
+                        break;
+                    case 2:
+                        if (userInfo.CharacterID2 == 0)
+                            canCreate = true;
+                        break;
+                    case 3:
+                        if (userInfo.CharacterID3 == 0)
+                            canCreate = true;
+                        break;
+                    default:
+                        break;
                 }
 
                 //判定为无法创建角色时返回错误消息
                 if(!canCreate)
                 {
-                    //玩家角色位置已满 理应不该出现这个错误
+                    //理应不该出现这个错误
                     //当玩家位置满时 点击创建角色按钮应有提示 无法进入创建角色界面
-                    Log.Error("玩家角色位置已满");
+                    Log.Error("玩家当前位置已有角色");
                     response.Error = ErrorCode.ERR_CreateNewCharacter;
                     reply(response);
                     return;
@@ -124,6 +126,7 @@ namespace ETHotfix
                     default:
                         throw new Exception($"创建新角色错误：{userInfo.Id}");
                 }
+
                 await dbProxy.Save(character);
                 await dbProxy.Save(userInfo);
 

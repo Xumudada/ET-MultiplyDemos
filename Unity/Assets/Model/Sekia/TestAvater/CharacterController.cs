@@ -191,7 +191,7 @@ public class UCharacterController
     {
 
 		animationController.wrapMode = WrapMode.Loop;
-		animationController.Play("breath");
+		animationController.Play("legacy_breath");
 		animationState = 0;
 	}
 	
@@ -199,10 +199,10 @@ public class UCharacterController
     {
 		
 		animationController.wrapMode = WrapMode.Once;
-		animationController.PlayQueued("attack1");
-		animationController.PlayQueued("attack2");
-		animationController.PlayQueued("attack3");
-		animationController.PlayQueued("attack4");
+		animationController.PlayQueued("legacy_attack1");
+		animationController.PlayQueued("legacy_attack2");
+		animationController.PlayQueued("legacy_attack3");
+		animationController.PlayQueued("legacy_attack4");
 		animationState = 1;
 	}
 	

@@ -2,19 +2,21 @@ namespace ETModel
 {
 	public static class ErrorCode
 	{
-		public const int ERR_Success = 0;
+        //自定义错误
+        public const int ERR_AccountAlreadyRegisted = 300001;
+        public const int ERR_RepeatedAccountExist = 300002;
+        public const int ERR_UserNotOnline = 300003;
+        public const int ERR_UserMoneyLessError = 300004;
+        public const int ERR_PlayCardError = 300005;
+        public const int ERR_SignError = 300006;
+        public const int ERR_CreateNewCharacter = 300007;
+
+        public const int ERR_Success = 0;
 		
 		// 1-11004 是SocketError请看SocketError定义
 		
 		// 100000 以上，避免跟SocketError冲突
 		public const int ERR_MyErrorCode = 100000;
-        public const int ERR_AccountAlreadyRegisted = 100001;
-        public const int ERR_RepeatedAccountExist = 100002;
-        public const int ERR_UserNotOnline = 100003;
-        public const int ERR_UserMoneyLessError = 100004;
-        public const int ERR_PlayCardError = 100005;
-        public const int ERR_SignError = 100006;
-        public const int ERR_CreateNewCharacter = 100007;
 
         // 小于这个Rpc会抛异常
         public const int ERR_Exception = 200000;

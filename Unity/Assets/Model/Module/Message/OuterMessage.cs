@@ -223,6 +223,17 @@ namespace ETModel {
       }
     }
 
+    private int seat_;
+    /// <summary>
+    /// 角色位置
+    /// </summary>
+    public int Seat {
+      get { return seat_; }
+      set {
+        seat_ = value;
+      }
+    }
+
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -235,6 +246,10 @@ namespace ETModel {
       if (Career != 0) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Career);
+      }
+      if (Seat != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Seat);
       }
       if (RpcId != 0) {
         output.WriteRawTag(208, 5);
@@ -256,11 +271,15 @@ namespace ETModel {
       if (Career != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Career);
       }
+      if (Seat != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Seat);
+      }
       return size;
     }
 
     public void MergeFrom(pb::CodedInputStream input) {
       name_ = "";
+      seat_ = 0;
       rpcId_ = 0;
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -278,6 +297,10 @@ namespace ETModel {
           }
           case 24: {
             career_ = (global::ETModel.CareerType) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            Seat = input.ReadInt32();
             break;
           }
           case 720: {

@@ -80,6 +80,8 @@ namespace ETModel
             Controller.Get("Select1").GObject.asButton.onClick.Add(OnSelect1); //选择一个角色位置 进入游戏或创建角色
             Controller.Get("Select2").GObject.asButton.onClick.Add(OnSelect2);
             Controller.Get("Select3").GObject.asButton.onClick.Add(OnSelect3);
+
+            Log.Debug("加载完选择角色界面");
         }
 
         //加载3个角色空位中的人物形象
@@ -102,7 +104,6 @@ namespace ETModel
 
                 //设置模型到指定位置
                 GameObject demo = SekiaHelper.CreateCharacter(skeleton, weapon, head, chest, hand, feet);
-                //FUIComponent fuiComponent = Game.Scene.GetComponent<FUIComponent>();
                 demo.transform.localPosition = new Vector3(30, -125, 1000); //模型的原点在脚下 向下位移半个身高 向右位移1/4身宽
                 //Log.Debug($"Holder位置 X：{holder.GObject.x}  Y：{holder.GObject.y}"); //编辑器中的坐标 以左上角为原点 Y为正值
                 demo.transform.localScale = new Vector3(125, 125, 125); //大小
@@ -146,16 +147,60 @@ namespace ETModel
             if (messageUser.Characters[index].Level == 0)
             {
                 //有空闲角色位置 进入角色注册界面
-                Log.Debug("创建更多角色");
                 CreateCharacterFactory.Create(messageUser);
+                CreateCharacterComponent creater = Game.Scene.GetComponent<FUIComponent>().Get(FUIType.CreateCharacter).GetComponent<CreateCharacterComponent>();
+                creater.Seat = index + 1;
+                Log.Debug("创建更多角色 位置：" + creater.Seat.ToString());
+
                 Game.EventSystem.Run(EventIdType.SelectCharacterFinish);
             }
             else
             {
-                Log.Debug("请求进入游戏世界");
+                Log.Debug("等待进入游戏世界");
                 //请求使用指定角色进入游戏
                 //SekiaHelper.Register(this.AccountInput.Get("Input").GObject.asTextInput.text, this.PasswordInput.Get("Input").GObject.asTextInput.text).NoAwait();
             }
+        }
+        
+        //退出界面需要重置所有元件属性
+        public override void Dispose()
+        {
+            if (this.IsDisposed)
+            {
+                return;
+            }
+            base.Dispose();
+
+            Log.Debug("退出选择角色界面");
+            Controller.Get("Select1").GObject.asButton.onClick.Remove(OnSelect1);
+            Controller.Get("Select2").GObject.asButton.onClick.Remove(OnSelect2);
+            Controller.Get("Select3").GObject.asButton.onClick.Remove(OnSelect3);
+            Controller.Get("Select1").Dispose();
+            Controller.Get("Select2").Dispose();
+            Controller.Get("Select3").Dispose();
+
+            messageUser = null;
+            Controller.Dispose();
+            SeatSelect = null;
+            NoneorExist1 = null;
+            NoneorExist2 = null;
+            NoneorExist3 = null;
+            Holder1.Dispose();
+            Holder2.Dispose();
+            Holder3.Dispose();
+            Money1.Dispose();
+            Money2.Dispose();
+            Money3.Dispose();
+            Mail1.Dispose();
+            Mail2.Dispose();
+            Mail3.Dispose();
+            Level1.Dispose();
+            Level2.Dispose();
+            Level3.Dispose();
+            Location1.Dispose();
+            Location2.Dispose();
+            Location3.Dispose();
+            isWaiting = false;
         }
     }
 }
